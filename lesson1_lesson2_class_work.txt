@@ -1,0 +1,21 @@
+1- Create a user named user1 and then change his or her default shell
+2- Set the password for user1 to A2360801a
+3- Switch to or login as user1
+4- Create a file called abc.tx
+5- using the echo command, write some text into the file like "Hello Classmates"
+6- Make a copy of the file. The new file name should be xyz.txt
+7-  What is the directory name where the two files are created
+8- what is the user id for the user you created in in question #1
+9- Using the getent command, confirm that user1 exists on your system
+10- Run the command to expire user1 on 12/31/2022
+11- List ALL the files including the hidden ones in user1 home directory.
+12- Create a new directory called dir1 under user1 home directory.
+13- Create a new directory called dir1 under the /tmp directory.
+14- Verify that all of the files in /etc/skel exist in user1s home directory.
+15- Check if user1 can cat /etc/shadow file
+15- add user1 to the group wheel.
+16- Verify if user1 can now cat /etc/shadow...Hint sudo
+17- As root rename the directory /tmp/dir1 to /tmp/dir2
+18- In the directory /etc/profile.d/ create a file called mine.sh and write city=Seatle
+19- Create a variable called State=Washington in the /etc/profile file
+20- Create an alias in user1s .bashrc like this alias catter='cat /etc/passwd'

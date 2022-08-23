@@ -1,0 +1,82 @@
+Script started on Mon 11 Jul 2022 08:09:13 PM MST
+]0;root@atlanta:/var/www/html/lessons[?1034h[31m[[m[38;5;172mroot[m@[38;5;153matlanta[m [38;5;214mlessons[m[31m][m# touch abc
+]0;root@atlanta:/var/www/html/lessons[31m[[m[38;5;172mroot[m@[38;5;153matlanta[m [38;5;214mlessons[m[31m][m# getent passwd
+root:x:0:0:root:/root:/bin/bash
+jay2:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:998:996::/var/lib/chrony:/sbin/nologin
+apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+stdnt16:x:1001:1001::/home/stdnt16:/bin/bash
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+cockpit-ws:x:997:994:User for cockpit-ws:/nonexisting:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+sachit:x:1014:1014::/home/sacchidanand:/bin/bash
+chris:x:1004:1004::/home/christopher:/bin/bash
+setroubleshoot:x:996:993::/var/lib/setroubleshoot:/sbin/nologin
+mahdi:x:1080:1085::/home/mahdi:/bin/bash
+mysql:x:27:27:MariaDB Server:/var/lib/mysql:/sbin/nologin
+erik2:x:1102:1106::/home/eric2:/bin/bash
+habdirah:x:1103:1107::/home/habdirah:/bin/bash
+hussein:x:1105:1109::/home/hussein:/bin/bash
+production:x:1108:1111::/home/production:/bin/bash
+testuser:x:1135:1138::/home/testuser:/bin/bash
+tammy:x:1136:1139::/opt/tammy:/bin/bash
+testing:x:1137:1140::/home/testing:/bin/bash
+hussein2:x:1138:1141::/home/hussein2:/bin/bash
+jonathan:x:1139:1142:Jonthan Lee:/home/jonathan:/bin/bash
+timmy:x:1159:1162::/home/timmy:/bin/bash
+susan:x:1160:1163::/home/susan:/bin/bash
+sam:x:1161:1164::/home/sam:/bin/bash
+test:x:1162:1077::/home/test:/bin/bash
+tech:x:1163:1166:Fake User:/home/tech:/bin/bash
+jsmith:x:1164:1168::/home/jsmith:/bin/bash
+joe:x:1165:1169::/home/joe:/bin/bash
+ann:x:1166:1170::/home/ann:/bin/bash
+jim:x:1167:1171::/home/jim:/bin/bash
+andi:x:1168:1172::/home/andi:/bin/bash
+bianca:x:1169:1173::/home/bianca:/bin/bash
+charles:x:1170:1174::/home/charles:/bin/bash
+cynthia:x:1171:1175::/home/cynthia:/bin/bash
+diosdavil:x:1172:1176::/home/diosdavil:/bin/bash
+eric:x:1173:1177::/home/eric:/bin/bash
+jacob:x:1174:1178::/home/jacob:/bin/bash
+paul:x:1175:1179::/home/paul:/bin/bash
+joseph:x:1176:1180::/home/joseph:/bin/bash
+josia:x:1177:1181::/home/josia:/bin/bash
+kendra:x:1178:1182::/home/kendra:/bin/bash
+lawrence:x:1179:1183::/home/lawrence:/bin/bash
+ryan:x:1180:1184::/home/ryan:/bin/bash
+sabin:x:1181:1185::/home/sabin:/bin/bash
+sharrymae:x:1182:1186::/home/sharrymae:/bin/bash
+sheraz:x:1183:1187::/home/sheraz:/bin/bash
+sunny:x:1184:1188::/home/sunny:/bin/bash
+leo:x:1185:1189::/home/leo:/bin/bash
+tito:x:1186:1190::/home/tito:/bin/bash
+james:x:1187:1191::/home/james:/bin/bash
+cadmin:x:1188:1192::/opt/cadmin:/bin/bash
+paul2:x:1189:1193::/home/paul2:/bin/bash
+andi2:x:1190:1194::/home/andi2:/bin/bash
+]0;root@atlanta:/var/www/html/lessons[31m[[m[38;5;172mroot[m@[38;5;153matlanta[m [38;5;214mlessons[m[31m][m# 
+]0;root@atlanta:/var/www/html/lessons[31m[[m[38;5;172mroot[m@[38;5;153matlanta[m [38;5;214mlessons[m[31m][m# 
+]0;root@atlanta:/var/www/html/lessons[31m[[m[38;5;172mroot[m@[38;5;153matlanta[m [38;5;214mlessons[m[31m][m# exit
+exit
+
+Script done on Mon 11 Jul 2022 08:09:28 PM MST

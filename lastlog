@@ -1,0 +1,75 @@
+#192.168.27.5:/u01/share /mnt/share nfs rw,sync,hard,intr,_netdev 0 0
+Username         Port     From             Latest
+root             pts/0                     Wed Mar  6 06:33:38 -0700 2022
+jay2             pts/0                     Wed Mar  6 06:33:38 -0700 2022
+bin                                        **Never logged in**
+daemon                                     **Never logged in**
+adm                                        **Never logged in**
+lp                                         **Never logged in**
+sync                                       **Never logged in**
+shutdown                                   **Never logged in**
+halt                                       **Never logged in**
+mail                                       **Never logged in**
+operator                                   **Never logged in**
+games                                      **Never logged in**
+ftp                                        **Never logged in**
+nobody                                     **Never logged in**
+systemd-network                            **Never logged in**
+dbus                                       **Never logged in**
+polkitd                                    **Never logged in**
+ntp                                        **Never logged in**
+sshd                                       **Never logged in**
+postfix                                    **Never logged in**
+chrony                                     **Never logged in**
+apache           pts/33                    Wed Jun 29 14:45:28 -0700 2022
+stdnt16          pts/0                     Fri May  6 07:21:41 -0700 2022
+tss                                        **Never logged in**
+cockpit-ws                                 **Never logged in**
+rpc                                        **Never logged in**
+tcpdump                                    **Never logged in**
+sachit           pts/1    50-201-205-166-s Thu Mar 22 13:27:37 -0700 2021
+chris            pts/5    50.230.164.6     Fri Dec 10 10:21:36 -0700 2021
+setroubleshoot                             **Never logged in**
+mahdi            pts/5    24.7.243.96      Thu Dec 30 19:13:20 -0700 2021
+mysql                                      **Never logged in**
+erik2            pts/11   c-73-254-28-208. Wed Feb  2 09:59:53 -0700 2022
+habdirah         pts/0    41.79.196.210    Sat Feb 26 08:58:35 -0700 2022
+hussein          pts/6    63.151.121.146   Thu Mar  7 11:49:00 -0700 2022
+production                                 **Never logged in**
+testuser                                   **Never logged in**
+tammy                                      **Never logged in**
+testing                                    Fri Mar 25 08:58:35 -0700 2022
+hussein2         pts/2    ip98-165-238-46. Thu Mar 31 07:29:44 -0700 2022
+jonathan                                   **Never logged in**
+timmy                                      **Never logged in**
+susan            pts/33                    Wed Jun 29 13:02:47 -0700 2022
+sam              pts/0                     Wed Apr 27 15:25:50 -0700 2022
+test                                       **Never logged in**
+tech                                       **Never logged in**
+jsmith                                     **Never logged in**
+joe              pts/1                     Tue May 24 13:20:08 -0700 2022
+ann                                        **Never logged in**
+jim              pts/4    71-150-197-100.l Fri Mar  13 07:07:01 -0700 2022
+andi             pts/0                     Fri Mar  13 07:20:37 -0700 2022
+bianca           pts/2    50.201.205.166   Tue Mar  5 06:44:34 -0700 2022
+charles          pts/11   24-148-60-31.s54 Thu Mar  7 12:25:04 -0700 2022
+cynthia          pts/7    50.201.205.166   Fri Mar  1 07:14:30 -0700 2022
+diosdavil        pts/14   50.201.205.166   Fri Mar  13 08:00:56 -0700 2022
+eric             pts/9    52.128.53.145    Fri Mar  13 08:20:44 -0700 2022
+jacob            pts/9    50.201.205.166   Fri Mar  13 08:26:18 -0700 2022
+paul             pts/4    c-174-61-216-170 Thu Mar  7 11:52:59 -0700 2022
+joseph           pts/8    c-24-19-26-16.hs Fri Mar  13 07:21:08 -0700 2022
+josia            pts/2    pool-173-79-196- Fri Mar  13 06:36:26 -0700 2022
+kendra           pts/3    136.152.38.144   Fri Mar  13 06:59:46 -0700 2022
+lawrence         pts/21   cpe-65-26-108-22 Wed Jun 29 07:30:09 -0700 2022
+ryan             pts/5    c-73-83-75-198.h Fri Mar  13 07:10:38 -0700 2022
+sabin            pts/10   c-73-109-19-22.h Fri Mar  13 07:22:55 -0700 2022
+sharrymae        pts/20   50.201.205.166   Wed Jun 29 13:40:02 -0700 2022
+sheraz           pts/1    89.187.183.152   Thu Mar  7 11:47:03 -0700 2022
+sunny            pts/9    096-042-091-103. Fri Mar  13 07:22:17 -0700 2022
+leo              pts/7    h67-204-152-3.be Thu Mar  7 11:47:20 -0700 2022
+tito             pts/3    174-21-100-18.tu Thu Jun 30 09:31:52 -0700 2022
+james            pts/33                    Wed Jun 29 11:26:21 -0700 2022
+cadmin                                     **Never logged in**
+paul2                                      **Never logged in**
+paul2                                      **Never logged in**

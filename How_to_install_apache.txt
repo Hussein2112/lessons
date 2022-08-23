@@ -1,0 +1,71 @@
+How to install Apache on Centos 7
+
+Introduction
+Apache is a Linux application for running web servers. It is part of the LAMP stack – a package of applications that form the basis for most web technology. LAMP stands for Linux, Apache, MyPHP, and PHP.
+This tutorial will show you how to install and configure the Apache web server on CentOS 7.
+
+
+Installing Apache on CentOS
+Step 1: Update Software Versions List
+Ensure you are using the latest versions of the software. 
+In a terminal window, input the command:
+sudo yum update #Note skip this command for now
+The system should reach out to the software repositories and refresh the list to the latest versions.
+
+Step 2: Install Apache
+To install Apache on your CentOS server, use the following command:
+sudo yum install httpd
+The system should download and install the Apache software packages.
+
+Step 3: Activate Apache
+To activate Apache, start its service first.
+1.	Enter the following command in a terminal window:
+2.	sudo systemctl start httpd
+3.	This will start the Apache service.
+4.	2. Next, set the Apache service to start when the system boots:
+5.	sudo systemctl enable httpd
+
+Step 4: Verify Apache Service
+	Display information about Apache, and verify it’s currently running with:
+	sudo systemctl status httpd
+
+Step 5: Configure firewalld to Allow Apache Traffic
+In a standard installation, CentOS 7 is set to prevent traffic to Apache.
+Normal web traffic uses the http protocol on Port 80, while encrypted web traffic uses the https protocol, on Port 443.
+
+1. Modify your firewall to allow connections on these ports using the following commands:
+sudo firewall-cmd ––permanent ––add-port=80/tcp
+sudo firewall-cmd ––permanent ––add-port=443/tcp
+2. Once these complete successfully, reload the firewall to apply the changes with the command:
+	sudo firewall-cmd ––reload
+
+
+
+
+
+
+
+
+
+Step 6:  Create a index file
+ as root 
+#cd  /var/www/html
+Vim index.html  and copy paste the following or just write anything else and save
+
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+:wq!
+
+Step 7: Test your website 
+Open a URL from your host machine
+And type your IP address
+

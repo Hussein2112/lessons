@@ -1,0 +1,172 @@
+
+
+Note:
+cadmin is used here as a username
+
+1- what does the r,w and x permissions  mean on a file 
+
+
+2- can a user list the contents in a directory if he/she has a read (r) permission on the directory?
+
+
+
+3- can a user create files in a directory if he/she has a write (w) permission on the directory?
+
+
+4- What are the permission contexts?
+
+
+
+5- Who can modify the permissions of files/directories?
+
+
+
+6- Explain the following commands
+   a- chmod a+rx file1
+   b- chmod go-rw file1
+   c- chmod u=rwx file1
+
+
+7- Explain the following commands
+   a- chmod 764 file1 
+   b- chmod 750 file1
+  
+
+8- What is a umask and how do you find your current umask is set to?
+
+
+9- If your umask is set to 022, what permissions will your newly created files and directory have?
+   files       
+   directories
+
+
+10- Explain the following commands
+    a- chown cadmin file1 
+    b- chown -R cadmin:sales /opt/apps
+    c- chown -R :mktg /opt/apps      
+    d- chgrp mktg /opt              
+
+12-  Why does the /usr/bin/passwd command require a SUID bit set?
+
+13- What is a common use of SGID on a directory?
+ 
+
+14- How do you set a sticky bit permission on a directory using the octal method?
+
+
+15- What is a benefit of using the immutable flag for a file
+
+
+16- When are the Access Control Lists permissions needed ?
+
+
+17- Explain the following commands
+    setfacl -m u:user1:rwx file1 
+    setfacl -b file1            
+    getfacl file1             
+
+
+18- Explain the following commands:
+    groups cadmin
+    getent passwd cadmin
+    lid cadmin         
+    usermod -aG wheel cadmin
+    gpasswd -d cadmin wheel
+
+
+19-  In how many locations can a sysadmin change the umask
+
+
+
+20-  What will be the command to make sure that no one including root can remove or write to the file /opt/important.txt
+
+
+21- Two specific users need access to a directory owned by root where backups are located. Which of the following commands would BEST ensure
+the specified users can access the backup files?
+A.  umask
+B.  chcon
+C.  chmod
+D..  setfacl
+
+
+22- A company wants to ensure that all newly created files can be modified only by their owners and that all new directory content can be changed
+only by the creator of the directory. Which of the following commands will help achieve this task?
+A.  umask 0022
+B.  umask 0012
+C.  chmod -R 0644 /
+D.  chmod -R 0755 /
+
+23- A Linux administrator needs every new file created on a directory to maintain the group permissions of the same directory. Which of the following
+commands would satisfy this requirement?
+A.  chmod o+s <directory>
+B.  chmod u+s <directory>
+C.  chmod +s <directory>
+D.  chmod g+s <directory>
+
+24- Ann, a Linux administrator, wants to edit a configuration management file. When she opens the file to edit, her text editor reports that the file has
+been opened in read-only mode. She then tries to edit the file as root by elevating via sudo and is still unable to save any changes. The error
+message in her text editor says that the read-only option is set on the file. Ann checks the permissions on the file and sees the following:
+-rw-rw-r-- 1 root wheel 30 Jun 13 15:38 infrastructure.yml
+Which of the following commands is the BEST option to allow her to successfully modify the file?
+A.  chmod 600 infrastructure.yml
+B.  chown root: infrastructure.yml
+C.  chattr -i infrastructure.yml
+D.  chmod o+w infrastructure.yml
+
+
+
+25- Ann, a sysadmin, has created a new directory and noticed that permissions on the new directory are as follows: drwx------. 1 ann ann 0 Jun 11 08:20
+work. Which of the following should the administrator do to restore default 
+permissions for newly created directories?
+A.  Change umask value in /etc/profile.
+B.  Run chmod command to update permissions.
+C.  Modify directory ownership to ann:ann with chown.
+D.  Execute chattr command to restore default access.
+
+
+26-An administrator notices a directory on a web server named 
+/var/www/html/old_reports that should no longer be accessible on the web. Which of
+the following commands will accomplish this task?
+A.  chmod 000 /var/www/html/old_reports
+B.  chgrp root /var/www/html/old_reports
+C.  chown apache /var/www/html/old_reports
+D.  setenforce apache /var/www/html/old_reports
+
+
+
+27- A Linux user wants to give read-only permissions to a directory and its 
+contents. Which of the following commands will allow the user to
+accomplish this task?
+A.  chmod -R 400 /new_directory/
+B.  chmod -R 600 /new_directory/
+C.  chmod 400 /new_directory/
+D.  chmod 600 /new_directory/
+
+28- Users in the sales department are unable to create new files in the shared 
+directory /Sales. A junior Linux administrator determines the
+permissions on the / Sales directory are set to rwxr-----
+and sales is the group owner of the directory.
+Which of the following is the BEST command for the junior administrator to 
+issue to allow the users to create new files?
+A.  umask 002
+B..  chmod 770 /Sales
+C.  chmod g+s /Sales
+D.  chmod 777 /Sales
+
+29- Joe, a user, creates a short shell script, shortscript.sh, and saves it in his home directory with default permissions and paths. He then attempts to
+run the script by typing ./shortscript.sh, but the command fails to execute.
+Which of the following commands would have allowed the script to run?
+A.  chmod u+x shortscript.sh
+B.  source ./shortscript.sh
+C.  chmod 155 ~/shortscript.sh
+D.  chgrp shortscript.sh Joe
+
+30- A Linux administrator needs to set permissions on an application with the following parameters:
+✑ The owner of the application should be able to read, write, and execute the application.
+✑ Members of the group should be able to read and execute the application.
+✑ Everyone else should not have access to the application.
+Which of the following commands would BEST accomplish these tasks?
+A.  chmod 710 <application name>
+B.  chmod 730 <application name>
+C.  chmod 750 <application name>
+D.  chmod 760 <application name>

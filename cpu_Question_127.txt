@@ -1,0 +1,19 @@
+How to verify if your CPU supports virtualization
+https://codepre.com/en/como-encontrar-si-una-cpu-es-compatible-con-la-tecnologia-de-virtualizacion-vt.html#:~:text=Find%20out%20if%20a%20CPU%20supports%20virtualization%20using,file%20indicates%20that%20your%20system%20will%20support%20VT.
+
+egrep -o "(svm|vmx)" /proc/cpuinfo
+vmx=intel
+svm=AMD
+
+
+How to verify if your cpu supports hyper-threading:
+cpuid|grep -i hyper-thread
+
+
+How to check if your CPU supports Advanced Encryption:
+https://www.cyberciti.biz/faq/how-to-find-out-aes-ni-advanced-encryption-enabled-on-linux-system/#:~:text=Type%20the%20following%20command%20to%20make%20sure%20that,%2Fproc%2Fcpuinfo%20OR%20%23%20grep%20-m1%20-o%20aes%20%2Fproc%2Fcpuinfo
+
+ grep -o aes /proc/cpuinfo
+
+
+

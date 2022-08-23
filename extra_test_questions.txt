@@ -1,0 +1,60 @@
+usermod -g mkt -aG wheel test -e '10/10/2022' -f 0
+
+
+1- Your Web server will connect to an external database and therefore you need to allow that thru SELINUX
+Which of the following options, will allow your webserver to connect to the database. Choose TWO
+A- sestatus
+B- getsebool
+C- ps -Z
+D- getenforce 1
+E- setsebool
+
+2- After you run the command ps -ef, you see about three hundred processes with the name [defunct]
+      How do you get rid of these processes
+A- Killall defunct
+B- reboot the server.
+C- renice them to a lower priority.
+
+
+3- you want tar up files in a directory and preserve symbolic links.
+Which of the following commands will achieve that goal
+
+A- tar czh my_tarball.tgz *
+B- tar czp my_tarball.tgz *
+C- ls | cpio -ov > allfiles.cpio
+
+
+4- You want to see your email information in git.
+Which of the following commands will show that information. Choose TWO
+git config --list
+git --init
+git config user.email
+
+
+
+5- You get the error message "Permission denied" after running the following command.
+../../scripts/x.sh. Which of the following commands will resolve this issue.
+
+A- chmod 755 ../../scripts/x.sh
+B- chmod 644 ../../scripts/x.sh
+C- Add that directory to the PATH variable
+D- Execute the script using a absolute path
+
+
+
+6- Which of the following servers use heartbeat. Choose Two
+A- Certificate Authority Server
+B- Logging Servers
+C- Cluster Servers
+D- Load balancers
+E- ssh Server
+F- NTP servers
+
+
+
+7- Which of the following commands will ensure that a process cleans after itself 
+after it is terminated
+A- kill -HUP PID
+B- kill -SIGKILL PID
+C- kill -SIGTERM PID
+D- kill -9 PID

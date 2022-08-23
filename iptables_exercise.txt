@@ -1,0 +1,45 @@
+
+You have two machines. On one of the machines, We will make changes to the 
+firewall rules using iptables.
+
+1- Stop the firewall as we will use iptables instead for now.
+systemctl stop firewalld
+systemctl mask firewalld
+
+
+2- List your iptables rules:
+iptables -L -n
+
+
+3- Save the current rules to a file:
+iptables-save > iptables.out
+
+
+4- Empty/Flush the rules:
+iptables -F
+
+5- Confirm that all the rules are flushed and you can only see empty Chains:
+iptables -L -n
+
+Note the default policy for the INPUT chain is "ACCEPT"
+
+-->ssh from another machine to this one:
+You should be able to as the default Policy for the INPUT chain is ACCEPT.
+This will work as long as sshd is running on the remote machine.
+
+
+6- Now change the default policy for INPUT to DROP
+iptables -P INPUT DROP
+
+7- List the policies to confirm that INPUT policy is set to DROP
+   iptables -L -n
+
+
+8- Add RELATED and ESTABLISHED for ports 80,443,22. Then test ssh and http. 
+   Didn't work for me!
+   #iptables -A INPUT -p tcp -m multiport --dport 80,443,22 -m conntrack --ctstat RELATED,ESTABLISHED -j ACCEPT
+
+9- NOW add the following rule "NEW" for the above ports.
+   #iptables -A INPUT -p tcp -m multiport --dport 80,443,22 -m conntrack --ctstat NEW,ESTABLISHED -j ACCEPT
+   Now, your ssh and http and https should work.
+This, proves to me that the NEW entry is required for the access to work.
