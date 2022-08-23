@@ -99,8 +99,8 @@ D.  traceroute
 
 
 6-
-A systems administrator observes high latency values when reaching a remote web server. Which of the following commands will help determine
-and isolate issues on the network side?
+A systems administrator observes high latency values when reaching a remote web server. 
+Which of the following commands will help determine and isolate issues on the network side?
 A.  mtr
 B.  dig
 C.  netstat
@@ -109,8 +109,10 @@ D.  route
 
 
 7-
-Due to security policies, a restriction was implemented that forbids direct access to the database server. The junior administrator needs to
-connect using SSH tunneling. Which of the following commands allows the junior administrator to connect from a desktop?
+Due to security policies, a restriction was implemented that forbids direct access to the database server. 
+The junior administrator needs to connect using SSH tunneling. Which of the following commands 
+allows the junior administrator to connect from a desktop?
+
 A.  ssh -L dbserver.local:5432:localhost:95432 postgres@dbserver.local
 B.  ssh -L 5432:localhost dbserver.local:5432 postgres
 C.  ssh -L 95432:localhost postgres@dbserver.local

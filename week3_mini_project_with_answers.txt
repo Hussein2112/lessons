@@ -67,6 +67,7 @@ sudo usermod -s /bin/ksh sam
     sudo cd /var/www/html
     sudo touch file{1..10}.txt
     sudo tar cvf /tmp/www.tar *  
+    echo "Mini Project" >> /var/www/html/index.html 
     
 
 14- Ensure the user susan has has rwx on the /shared directory

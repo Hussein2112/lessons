@@ -1,3 +1,8 @@
+
+Note:
+cadmin is used a username here
+
+
 1- what does the r,w and x permissions  mean on a file 
    r allows access and view contents of a file to user.
    w allows the user to save changes to a file

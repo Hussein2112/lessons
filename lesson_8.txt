@@ -157,3 +157,14 @@ C.  date
 D.  time
 E.  hwclock
 F.  crontab
+
+
+8-
+After starting a long-running script, a systems administrator needs to verify
+the frequency of what is filling up the /var partition and kill it because
+it is consuming too much space.
+Which of the following is the correct sequence given only a terminal is available?
+A.  CTRL-C 2. bg 3. watch df /var 4. CTRL-C 5. fg 6. CTRL-Z
+B.  CTRL-C 2. fg 3. watch df /var 4. CTRL-Z 5. bg 6. CTRL-Z
+C.  CTRL-Z 2. bg 3. watch df /var 4. CTRL-C 5. fg 6. CTRL-C
+D.  CTRL-Z 2. bg 3. watch df /var 4. CTRL-Z 5. fg 6. CTRL-C

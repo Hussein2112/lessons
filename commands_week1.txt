@@ -1,18 +1,34 @@
 Lesson1
 
 File Management
+
 ====================
-touch file1 file2 file3 file4 file11 file12
-ls                             #list files in the current directory. No file attributes displayed just names
-ls -al                         #List all files including hidden ones and their attributes
-ls -ltr                        #List all files in reverse order by time. Newest ones listed at the bottom. My favorite ls command
-ls -lh                         #List all files with attributes. Show their size in Human readable format
+Start practicing after you login for the first time:
+Let us first create the files to practice with:
+
+touch file1 file2 file3 file4 file11 file12    #This command will create the 6 files listed
+touch ab{1..12}                                #This command will create files ab1 to ab12
+touch xyz{1..4}.txt                        #This command creates files xyz1.txt - xyz4.txt
+date --i                                  # this commands shows YYYY-MM-DD
+
+touch file_$(date --i).log           
+touch file_$(date --i)_{1..10}.log
+touch {2015,2016,2017,2018}.{q1,q2,q3,q4}
+
+Now let us get started with basic commands:
+--------------------------------------------
+
+ls            #list files in the current directory. No file attributes displayed just names
+ls -al        #List all files including hidden ones and their attributes(permissions/ownership)
+ls -ltr       #List all files in reverse order by time. Newest ones listed at the bottom.
+ls -lh        #List all files with attributes. Show their size in Human readable format
 ls -ltr /var/log               #list the files in /var/log in reverse order by time showing newest ones at the bottom.
 ls -l xyz[1-3]*               #List all files with name starting with xyz1 or xyz2 or xyz3 followed by other characters.
 ls -l [af]*                   #List all files that start with a or f followed by other characters.
 ls -l ab??                    #List the files with name starting with ab followed by two characters
 
-
+echo command examples:
+-----------------------
 echo                                        #Will display an empty line
 echo "Hello Everyone"                       #Will echo the words Hello Everyone on the screen
 echo "Hello Everyone" > file1.txt           #Will write "Hello Everyone" on file1.txt overwriting the old content of file1.txt
@@ -21,7 +37,9 @@ echo "Hello Everyone" >> file1.txt          #Will append "Hello Everyone" on fil
 pwd                                         #Displays the current working directory on the screen
 
 
-cd                       #Takes you to your current user's home directory
+cd command examples:
+-------------------------
+cd                       #Takes you to your current user's home directory...Same as cd ~
 cd ~cadmin               #Will take you to user cadmin home directory provided you have permission to access that user's directory.
 cd -                     #Will take you to the last directory your were in
 cd /etc                  #Will take you to the /etc directory
@@ -30,16 +48,26 @@ cd ../                   #Go back one directory from your current directory
 cd ../..                 #Go back two directories back from your current directory
 
 
+More touch command examples:
+-------------------------------
 
 touch file1 file2 file3 file4 file11 file12   # Will create all these files. Provided you have permission to create files in that directory.
 touch -t 2006221010 Downloads  # YYMMDDHHMM.ss # will change the timestamp of the Downloads directory
 touch -f /var/log/messages
 
+
+cp command examples:
+-------------------
 cp file1 file2                               #Will copy file1 to file2
 cp -r /home/cadmin/dir1 /tmp/dir1            #Will copy that directory contents recursively to /tmp/dir1
 
-mkdir dir1                                  #Creates dir1 in your current location provided you have the permission to do so.
-mkdir /tmp/dir1                             #Creates dir1 in /tmp. Provided that directory was not created already by another user.
+mkdir command examples:
+-------------------------
+mkdir dir1                          #Creates dir1 in your current location provided you have the permission to do so.
+mkdir /tmp/dir1                    #Creates dir1 in /tmp. Provided that directory was not created already by another user.
+
+mv command examples:
+-------------------
 
 mv dir1 dir2                                #if dir2 does NOT exit, this command renames dir1 to dir2 But if dir2 exit then 
 					     it will move dir1 into dir2
@@ -47,23 +75,30 @@ mv file1 /tmp                               #moves file1 from current directory 
 mv file2 /tmp/file3                         #moves file2 from current directory to /tmp renaming it to file3
 
 
+rm command examples:
+-----------------------
+rm xyz*                           #Removes all files with names starting with xyz. Must have permission to
+rm file??                         #Removes any file the starts with file followed by two other characters. Must permission
+rm -rf /tmp/*                     #Removes all the files /tmp without prompting. Must be root
+rmdir dir1                        #This command will remove the directory named dir1 only if it is empty.
 
-rm xyz*                                    #Removes all files with names starting with xyz. Must have permission to
-rm file??                                  #Removes any file the starts with file followed by two other characters. Must permission
-rm -rf /tmp/*                              #Removes all the files /tmp without prompting. Must be root
-rmdir dir1
 
-cat 
+cat command examples:
+---------------------
 cat file1                                #Displays the contents of file1 on the screen
 cat file1 > file2                        #Writes contents of file1 to file2. Overwrites anything that was written in file2
 cat /var/log/messages                    #Displays the contents of the messages file on the screen.
 
 
+tail command examples:
+---------------------
 
 tail -f /var/log/messages               #Displays the last ten lines and also any new content that is written to the file /var/log/messages
 tail /var/log/messages                  #Displays the last 10 lines
 tail -20 /var/log/messages              #Displays the last 20 lines
 
+head command examples:
+----------------------
 head -15 /etc/passwd                    #Displays the top 15 lines
 
 File Editing Commands
@@ -90,7 +125,9 @@ init 5                #Multiuser with GUI    ...Works on Old and New Linux
 
 Switch User commands
 ======================
-
+Note: 
+The sudo commands will only work if your current user has sudo privileges. For example if the user is a member of wheel group.
+------------------------------------------------------------------------------------------------------------------------------
 su - root               #Switch user to root
 su -                    #Swith user to root
 su root                #Switch to root but keeps old user's environment...not recommended especially for new users

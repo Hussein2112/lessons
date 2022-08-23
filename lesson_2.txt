@@ -41,7 +41,7 @@
 
 18- What is the difference between the commands whoami and "who am i"
 
-19- Explain the commands who, last, lastb and id
+19- Explain the commands who, last, lastb and id, getent passwd, lid
 
 20- What is the difference between the files /etc/bashrc and .bashrc
 

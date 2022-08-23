@@ -208,11 +208,16 @@ Lesson 8:
 
 Localization:
 --------------
+The process of adapting OS components for use within a distinct culture, other than the 
+initial culture they were designed for.
+
 The /usr/share/zoneinfo/  is a container for all regional time zones available on system.
 
-Two ways to change the time zone
-1- ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime 
+Three ways to change the time zone
+1- rm -f /etc/localtime; ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime 
 2- timedatectl set-timezone America/Los_Angeles
+3- export TZ=Asia/Tokyo
+4- system-config-date
 
 timedatectl status
 timedatectl list-timezones
@@ -323,8 +328,7 @@ Example: systemctl status httpd or systemctl status sshd
 systemctl enable {service}    ==>Enable a service to be started on boot.
 Example: systemctl enable httpd
 
-systemctl disable {service}    ==>Disable a service so that it is no longer started on
-boot.
+systemctl disable {service}    ==>Disable a service so that it is no longer started on boot.
 Example: systemctl disable cupsd
 
 systemctl start {service}       ==>Start (activate) a service immediately.
@@ -361,6 +365,11 @@ hostnamectl command examples:
 ------------------------------
 hostnamectl set-hostname server01
 
+
+systemd-analyze:
+Retrieves performance stats for boot operations
+Examaple:
+systemd-analyze blame    #Used to identify services/units that make system slow to boot.
 
 
 What is the SysVinit equivalent of "systemctl enable httpd.service"?
@@ -509,7 +518,7 @@ free -th
 
 vmstat command
 Displays stats about virtual memory and other system resources.
-
+Example: vmstat 1 20  
 
 OOM Killer:
 -----------
@@ -572,7 +581,7 @@ lpr -P HPLJ5 students.txt
 
 
 
-The lsusb Command:
+The lsusb Command:root
 ----------------
 Displays info about devices connected to USB.
 Scans /dev/bus/usb/ directory.

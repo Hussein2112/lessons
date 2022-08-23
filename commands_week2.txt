@@ -199,13 +199,16 @@ Can use following criteria:
 #find . -empty -type f                 ==> find empty files in the current directory of type file
 #find . -empty -type f -exec rm -f {} \;   ==> find empty files and removes them
 #find . -empty   |xargs rm -rf             ==> find empty files and directories and remove them
+#find . -empty -delete
+#find / -name core -delete
 #find ~cadmin -name "*.tar" -exec cp -v {} /home/stdnt16/test/ \;  ==> find files with  .tar extension and copy thm to /home/stdnt16/test directory
 #find ~cadmin -name "*.tar" |xargs -Ix cp x  /home/stdnt16/test    ==> same as above but using xargs
 
 #find / -perm /1000 -ls   ==> Will list all the files with sticky bit set
 #find / -perm /2000 -ls   ==> Will list all the files with SGID bit set
 #find / -perm /4000 -ls   ==> Will list all the files with SUID bit set
-
+#find  .  \( -name "*.pdf" -or -name "*.txt" \)
+#find  .  \( -name "c*" -and -name "*.txt" \)
 
 
 #which cat    ==> find where cat was installed or which version of a command is getting executed in case there is more than one version is installed

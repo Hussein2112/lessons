@@ -1,4 +1,4 @@
-Note:
+NOTE:
 Make a snapshot of your VM or clone it.
 
 where possible, show the commands you used.

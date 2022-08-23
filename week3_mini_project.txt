@@ -1,9 +1,13 @@
+Note:
+for Step 1 and Step 2, You can use a Template instead of installing a new machine.
+
+
 1- Install a Centos 7 server. Call it test
 2- Make sure to have a seperate partition for /var and /home while installing
 
-3- after installation, add a second disk (2G).
-
-4- create a xfs filesystem on the disk and mount it on /shared
+3- after installation, add Two disk (2G each).
+   - Create a logical volume (applv) (must create PVs and VG first)
+4- create a xfs filesystem on the LV and mount it on /shared
 
 5- Create two groups sales and mkt
 
@@ -24,14 +28,17 @@
 
 
 10- Install Apache webserver on your new server
-   10a-
-       Create few files in the webserver DocumentRoot which is /var/www/html
+   10a- Create few files in the webserver DocumentRoot which is /var/www/html
+   10b- Create a index file in that Same directory. (index.html)
+   10c- Edit the index.html file and write mini project in it.
  
 11- Make sure the webserver is using port 8080 instead of port 80
+    Hint: You do this by editing the webserver config file and restarting the webserver.
 
 12- Make sure that port 8080 is allowed through the firewall
+    Hint: firewall-cmd 
 
-13- Tar up the DocumentRoot of the webserver.
+13- Tar up the files in DocumentRoot of the webserver (/var/www/html).
 
     
 

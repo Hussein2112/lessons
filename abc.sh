@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/xsh
 
-ls -l
+#nslookup google.com
+ls -l /etc/hosts

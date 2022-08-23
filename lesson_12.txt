@@ -138,3 +138,19 @@ A.  Run netstat to ensure the port is correctly bound, and configure the firewal
 B.  Run route to ensure the port is correctly bound, and configure the firewall to allow access on ports 80 and 443
 C.  Run netcat to ensure the port is correctly bound, and configure a static route to the web to allow access on ports 80 and 443
 D.  Run route to ensure the port is correctly bound, and configure SELinux to allow access on ports 80 and 443
+
+
+21-After you run the command ps -ef, you see about three hundred processes with the name [defunct]
+      How do you get rid of these processes
+A- Killall defunct
+B- reboot the server.
+C- renice them to a lower priority.
+
+
+22-Your Web server will connect to an external database and therefore you need to allow that thru SELINUX
+Which of the following options, will allow your webserver to connect to the database. Choose TWO
+A- sestatus
+B- getsebool
+C- ps -Z
+D- getenforce 1
+E- setsebool
