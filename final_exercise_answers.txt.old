@@ -1,0 +1,202 @@
+Before you start this exercise, ensure you
+ A- add a second network adapter to your Centos Server. Add the adapter  as a  "Bridged Adapter"
+ B- Add three disks on your Server. Each disk should be 1G each
+
+
+1- change the timezone of your Server (VM) to Los-Angeles
+
+Answer:
+   A- One way to change the timezone is
+      First list the timezones and use  grep to get the timezone you are looking for.
+      Example:
+             timedatectl list-timezones |grep -i angeles
+     Second:
+             timedatectl set-timezone America/Los_Angeles
+             
+   B- Another way to  change timezone would be with the following command:
+             ln -sf /usr/share/zoneinfo/America/Los_Angeles  /etc/localtime
+
+   C- A third way to change the timezone is as follows:
+             export TZ=America/Los_Angeles
+
+      You can add this command to your .bashrc or .bash_profile  for future processing
+
+
+2- find out the language and confirm it is set to en_US with UTF8(US English)
+     A- One way to confirm the LANG variable:
+        echo $LANG
+     B- locale
+   
+    
+3- Create a user called devuser. Set a password for that user
+   useradd devuser
+   echo devuserpass |passwd --stdin devuser
+
+
+3a- Create a Group called devops
+4- Make that user a member of the devops and wheel groups
+5- Create a VolumeGroup Called sharedvg. Use Only one Disk.
+   Create a Logical Volume Called sharedlv. 100M in size
+   Create a ext4 filesystem on sharedlv
+   create a mountpoint called /shared and mount it persistently
+    using /etc/fstab create 10 files in it.  file1 to file10
+6- change the group of the directory and ensure the permissions 
+   of the directory are set to read/write and execute for the 
+   owner and group.
+   -Set the SGID bit set on the /shared directory.
+
+ 
+7- what is the IP address for enp0s3 and enp0s8
+ip a
+
+8- Make sure the user devops expires on the 
+   12/5/2023 date
+   usermod -e 12/5/2023 devops
+
+9- We changed our mind so Get rid of the expiration date for devuser
+   chage -E -1 username
+
+
+10- Create a user called susan and make sure that susan has rwx
+    to the directory /shared. Only susan should have that access level.
+    sudo setfacl -m u:susan:7 /shared
+11- Confirm your server is set to runlevel 3
+    and if not set it to run level 3
+    Change the default target to graphical.target and reboot
+
+12- Ensure that SELinux is set to Enforcing mode. If not set it to enforcing mode
+     
+
+
+13- Install nginx webserver 
+    yum install -y nginx    
+
+14- Make sure that the webserver is set to startup after a reboot.
+    #systemctl enable nginx
+
+15- Download the index.html file in atlanta /var/www/html/index.html
+    to your Web Server's DocumentRoot
+    Answer:
+    cd /var/www/html
+    wget 45.32.212.147:8080/index.html
+
+
+16- See if your Cohort can access that the website.
+  But first you can access it locally
+   http://localhost 
+
+
+
+17- Change the ssh port of your server from 22 to 2200 and make sure that takes effect immediately. 
+    Make sure you read the line above the port in the config file.
+
+    
+18- Change the webserver port to 8080. Restart the WebServer and Confirm 
+    that the WebServer is listening on port 8080
+
+19- Download the stress package as rpm. (No Install..just download)
+    yum install --downloaddir=/packages --downloadonly stress
+
+
+20- Install the stress package that you downloaded above then remove it. 
+    #rpm -ivh /packages/stress-1.0.4-16.el7.x86_64.rpm
+    or
+    #yum localinstall /packages/stress-1.0.4-16.el7.x86_64.rpm
+20a- Confirm that the package stress is now installed.
+     rpm -qa |grep stress
+     or
+     yum list installed |grep stress
+
+
+21- Change the grub time out to 20 seconds.
+    #vim /etc/default/grub and change the timeout field.
+    #grub2-mkconfig -o /boot/grub2/grub.cfg
+
+22- Add a disk to your server. Assuming the disk name is /dev/sdb,
+    create a partition using fdisk. 
+    Then create a xfs filesystem on /dev/sdb1 and mount it
+    on /opt  using systemd
+    After Creating the LV or partition use the following 
+    systemd unit file to mount it instead of /etc/fstab
+  
+vim /etc/systemd/system/opt.mount
+==========================================
+[Unit]
+Before=local-fs.target
+
+[Mount]
+What=/dev/mapper/vgname-lvname
+Where=/opt
+Type=xfs
+Options=defaults,usrquota,grpquota
+
+[Install]
+WantedBy=multi-user.target
+==========================================
+Save the file.
+# systemctl daemon-reload opt.mount
+#systemd-analyze verify opt.mount
+#systemctl cat opt.mount
+
+#systemctl list-dependencies
+#systemctl status opt.mount
+systemctl enable opt.mount
+#systemctl start opt.mount
+
+23- Create a 1G file in /opt. Name the file 1GFile
+    A- Using the du command, identify the biggest files in /opt
+
+
+24- What device driver is your network card enp0s3 using.
+    What is the version of that device driver
+   #lshw -c network
+
+26- Unload the NIC kernel module (Device Driver) and see what happens to 
+    the output of the command "ip a" 
+    Is the interface still there.
+    Confirm the kernel module is no longer loaded.
+
+27- Load the NIC kernel module and ensure you can ping google.com
+
+28- If not already, ensure you can ssh to seattle using ssh keys.
+
+ 29-
+  A- tar up and compress (gzip) all the files in /shared
+  B- Using the scp command, copy the tar file
+     to your home directory in seattle
+
+ 30- Create a NFS Server and NFS Client.
+     Use the link below for examples.
+
+     Use the link below for examples.
+     http://45.32.212.147:8080/text/nfs.txt
+
+
+
+
+
+
+
+31- After making sure that you can scp the files in #29,
+    create a cron job that automates the scp every Sunday at 1:45 AM
+
+
+32-  Create two more users, emily and ethan and make them members of the
+     engineering team. These two users need access to the files in /shared
+     But they want to access /shared as /engineering not /shared.
+Bonus 1:
+Lynis Auditing
+
+The final step on your administrator's list involves running 
+an audit against the system in order to harden it. 
+You'll use the system and security auditing tool Lynis to do so.
+
+A. Install the Lynis package to your system if it is not already installed.
+B. Run a Lynis system audit
+   #lynis system audit
+
+Bonus 2
+1-Confirm  
+A- That your machine is a virtual machine and not a physical machine
+B- What is the Operating System and the Kernel version of your server
+

@@ -1,0 +1,70 @@
+1- A Linux administrator needs to create a new cloud.cpio archive containing all the files from the current directory. Which of the following commands can help to accomplish this task?
+•	A. ls | cpio -iv > cloud.epio
+•	B. ls | cpio -iv < cloud.epio
+•	C. ls | cpio -ov > cloud.cpio
+•	D. ls cpio -ov < cloud.cpio
+
+
+
+2- A systems administrator made some changes in the ~/.bashrc file and added an alias command. When the administrator tried to use the alias command, it did not work. Which of the following should be executed FIRST?
+•	A. source ~/.bashrc
+•	B. read ~/.bashrc
+•	C. touch ~/.bashrc
+•	D. echo ~/.bashrc
+
+
+3- A Linux administrator created the directory /project/access2all. By creating this directory, the administrator is trying to avoid the deletion or modification of files from non-owners. Which of the following will accomplish this goal?
+•	A. chmod +t /project/access2all
+•	B. chmod +rws /project/access2all
+•	C. chmod 2770 /project/access2all
+•	D. chmod ugo+rwx /project/access2all
+
+
+4- Due to low disk space, a Linux administrator finding and removing all log files that were modified more than 180 days ago. Which of the following commands will accomplish this task?
+•	A. find /var/log -type d -mtime +180 -print -exec rm {} \;
+•	B. find /var/log -type f -modified +180 -rm
+•	C. find /var/log -type f -mtime +180 -exec rm {} \
+•	D. find /var/log -type c -atime +180 –remove
+
+5- A Linux engineer is setting the sticky bit on a directory called devops with 755 file permission. Which of the following commands will accomplish this task?
+•	A. chown -s 755 devops
+•	B. chown 1755 devops
+•	C. chmod -s 755 devops
+•	D. chmod 1755 devops
+
+
+
+6- Junior system administrator had trouble installing and running an Apache web server on a Linux server. You have been tasked with installing the Apache web server on the Linux server and resolving the issue that prevented the junior administrator from running Apache.
+
+INSTRUCTIONS -
+Install Apache and start the service. Verify that the Apache service is running with the defaults.
+Typing “help” in the terminal will show a list of relevant event commands.
+If at any time you would like to bring back the initial state of the simulation, please click the Reset All button.
+
+7- A systems administrator needs to check if the service systemd-resolved.service is running without any errors. Which of the following commands will show this information?
+•	A. systemctl status systemd-resolved.service
+•	B. systemctl enable systemd-resolved.service
+•	C. systemctl mask systemd-resolved.service
+•	D. systemctl show systemd-resolved.service
+
+
+8- user is asking the systems administrator for assistance with writing a script to verify whether a file exists. Given the following:
+ 
+#!/bin/bash
+ 
+filename=$1
+< CONDITIONAL >
+  echo "file exists"
+else
+  echo "file doesn't exist"
+fi
+   
+Which of the following commands should replace the <CONDITIONAL> string?
+•	A. if [ -f "$filename" ]; then
+•	B. if [ -d "$filename" ]; then
+•	C. if [ -f "$filename" ] then
+•	D. if [ -f "$filename" ]; while
+
+
+
+

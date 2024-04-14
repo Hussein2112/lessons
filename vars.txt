@@ -1,0 +1,3 @@
+export DIR=/tmp
+export LOG=/tmp/mylog.txt
+export name=James

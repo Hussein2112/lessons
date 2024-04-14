@@ -64,3 +64,16 @@ systemctl status sshd
 17- ssh tunnelling
     ssh  stdnt16@chicago -L 9432:localhost:5432
 https://www.youtube.com/watch?v=bKZb75TaRyI
+
+
+18- How to use tcpdump
+--Start a tcpdump to  capture connections to port of seatac server
+tcpdump -vv host seatac and port 80 -w www.pcap &
+
+--Run the lynx command on your local server to generate some web traffic
+lynx seatac
+--Bring the tcpdump command to the foreground then CTRL+C
+fg %1
+
+--Examine the dump file for connections
+tcpdump -r www.pcap

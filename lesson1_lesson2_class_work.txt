@@ -1,3 +1,5 @@
+This exercise is done on your Virtual Machine NOT in Atlanta
+=============================================================
 1- Create a user named user1 and then change his or her default shell
 2- Set the password for user1 to A2360801a
 3- Switch to or login as user1

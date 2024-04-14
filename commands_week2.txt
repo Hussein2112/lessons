@@ -125,7 +125,7 @@ The du command displays file or directory sizes.
 Example:
 du -s * |sort -rn -k1|head   #Sort files in this directory by size and show the top 10
 du -h /backup/sys
-
+du --max-depth=1 -m -x / 
 
 I/O Scheduling:
 The process by which the OS determines the order of I/O operations as they pertain 
@@ -189,7 +189,7 @@ Can use following criteria:
 -nouser
 
 
-
+#find . -type f -links +1   ---> find any files that have links
 #find . -name hosts         ==> Search the current directory and subdirectories for file(s) named hosts. 
 #sudo find / -name passwd   ==> Searches the whole system for a file named passwd
 #find . -ctime 1            ==> changed in the last 24 hours
@@ -258,7 +258,9 @@ less and more  are used to page thru lengthy text files
 #sed '/Apache/d'     software_list.txt                         ==> delete line containing the string Apache from file...doesn't change file itself. Only on stdout
 sed -i 's/apache/Apache/g' software_list.txt                ==> # Search and replace apache with Apache
 
+#sed 'N a\text to append' filename ==> Where "N" is the line number after which the text will be appended and "text to append" is the actual text that will be appended.
 
+#sed '2d' abc  # Deletes line 2 in the file abc
 
 The ln command:
 ---------------

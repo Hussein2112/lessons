@@ -1,0 +1,84 @@
+Flatpak Summary
+================
+Flatpak comes preinstalled with CentOS7 and higher.
+Flatpak is essentially an APPSTORE for Linux.
+https://flathub.org/home
+
+Flatpak runs in a sandbox like a container which means it is essentially OS agnostic
+Flatpak requires that you initially tell it which "repository" or "HUB" to use.
+The main hub for flatpak software is flathub.
+Flatpak applications are GUI based and therefore requires that you have 
+a Desktop like GNOME or KDE running.
+
+
+Note:
+To find all the applications hosted in flathub visit flathub.org
+and click on the application you need and you will
+find the INSTALLATION STEPS there at the bottom.
+
+
+
+There are initially no repositories available as seen that there is no output from 
+the following command.
+  #flatpak remotes
+
+
+Next, add flathub as a repo.
+  #flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  
+Now you should be able to see flathub as a repo.
+#flatpak remotes
+
+To remove flathub from your repository list:
+flatpak remote-delete flathub
+
+
+List all the packages/Softwares available in flathub
+  #flatpak remote-ls flathub
+
+See if Visualstudio is available as software.
+  #flatpak remote-ls flathub|grep -i visual
+
+Or even better, Check as below
+  flatpak remote-ls flathub visualstudio
+  flatpak search flathub visual
+  flatpak search *
+
+Update all installed flatpaks if updates are available:
+flatpak update
+or
+flatpak update com.visualstudio.code
+  
+Find information about visualstudio software. 
+flatpak remote-info flathub com.visualstudio.code
+
+Install visualstudio ... This will take sometime
+  flatpak install flathub com.visualstudio.code
+
+
+Find what flatpaks are installed:
+flatpak list
+
+Next run the flatpak we installed earlier:
+flatpak run com.visualstudio.code
+
+Update all the installed flatpaks or just one
+flatpak update
+or
+flatpak update com.visualstudio.code
+
+
+Remove any flatpak you don't need.
+flatpak remove com.visualstudio.code
+
+Remove any unused runtimes flatpaks
+flatpak remove --unused 
+
+
+For Documentation checkout the following link:
+http://doc.flatpak.org/en/latest
+
+More Read:
+https://flathub.org/home
+https://www.geeksforgeeks.org/why-you-should-opt-out-from-ubuntu/
+https://flatpak.org/setup/

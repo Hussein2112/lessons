@@ -1,18 +1,22 @@
-#192.168.27.5:/u01/share /mnt/share nfs rw,sync,hard,intr,_netdev 0 0
 Username         Port     From             Latest
-root             pts/0                     Wed Mar  6 06:33:38 -0700 2022
-jay2             pts/0                     Wed Mar  6 06:33:38 -0700 2022
-bin                                        **Never logged in**
-daemon                                     **Never logged in**
-adm                                        **Never logged in**
-lp                                         **Never logged in**
-sync                                       **Never logged in**
-shutdown                                   **Never logged in**
-halt                                       **Never logged in**
-mail                                       **Never logged in**
-operator                                   **Never logged in**
-games                                      **Never logged in**
-ftp                                        **Never logged in**
+root             pts/12                    Sun Mar 12 14:03:22 -0800 2024
+jay2             pts/12                    Sun Mar 12 14:03:22 -0800 2024
+bin               in**
+ad                  Wed May 17 16:46:47 -0700 2023
+daemon                    l                Thu Jan 29 19:38:08 -0800 1987
+adm                       **Never logged i Thu Jan 29 19:38:08 -0800 1987
+lp               logged i                  Thu Apr  2 05:19:50 -0800 1987
+sync                      **
+tss           Thu Jan 29 19:38:08 -0800 1987
+shutdown         t              **Never lo Wed Jan 14 19:47:45 -0800 2026
+halt             Never lo                  Mon Jun  1 06:03:28 -0700 1992
+mail                      ged in**
+tammy   Thu Jan 29 19:38:08 -0800 1987
+operator                  er logged in**
+s Thu Jan 29 19:38:08 -0800 1987
+games            d in**
+a                  Wed Nov 29 08:31:43 -0800 2023
+ftp                        **Never logged  Thu Jan 29 19:38:08 -0800 1987
 nobody                                     **Never logged in**
 systemd-network                            **Never logged in**
 dbus                                       **Never logged in**
@@ -21,55 +25,202 @@ ntp                                        **Never logged in**
 sshd                                       **Never logged in**
 postfix                                    **Never logged in**
 chrony                                     **Never logged in**
-apache           pts/33                    Wed Jun 29 14:45:28 -0700 2022
-stdnt16          pts/0                     Fri May  6 07:21:41 -0700 2022
+apache                                     **Never logged in**
+stdnt16                                    **Never logged in**
 tss                                        **Never logged in**
 cockpit-ws                                 **Never logged in**
 rpc                                        **Never logged in**
 tcpdump                                    **Never logged in**
-sachit           pts/1    50-201-205-166-s Thu Mar 22 13:27:37 -0700 2021
-chris            pts/5    50.230.164.6     Fri Dec 10 10:21:36 -0700 2021
+sachit                                     **Never logged in**
 setroubleshoot                             **Never logged in**
-mahdi            pts/5    24.7.243.96      Thu Dec 30 19:13:20 -0700 2021
+mahdi            pts/2    c-107-4-165-198. Sat Dec  9 09:04:08 -0800 2023
 mysql                                      **Never logged in**
-erik2            pts/11   c-73-254-28-208. Wed Feb  2 09:59:53 -0700 2022
-habdirah         pts/0    41.79.196.210    Sat Feb 26 08:58:35 -0700 2022
-hussein          pts/6    63.151.121.146   Thu Mar  7 11:49:00 -0700 2022
-production                                 **Never logged in**
-testuser                                   **Never logged in**
+erik2                                      **Never logged in**
+habdirah         pts/0    172.58.137.180   Wed Feb 15 13:50:58 -0800 2023
+hussein          pts/0    168.149.77.233   Fri Jan 12 07:21:24 -0800 2024
+production       pts/0                     Fri Jun 16 14:03:13 -0700 2023
 tammy                                      **Never logged in**
-testing                                    Fri Mar 25 08:58:35 -0700 2022
-hussein2         pts/2    ip98-165-238-46. Thu Mar 31 07:29:44 -0700 2022
-jonathan                                   **Never logged in**
-timmy                                      **Never logged in**
-susan            pts/33                    Wed Jun 29 13:02:47 -0700 2022
-sam              pts/0                     Wed Apr 27 15:25:50 -0700 2022
-test                                       **Never logged in**
+hussein2                                   **Never logged in**
+susan                                      **Never logged in**
 tech                                       **Never logged in**
 jsmith                                     **Never logged in**
-joe              pts/1                     Tue May 24 13:20:08 -0700 2022
+joe                                        **Never logged in**
 ann                                        **Never logged in**
-jim              pts/4    71-150-197-100.l Fri Mar  13 07:07:01 -0700 2022
-andi             pts/0                     Fri Mar  13 07:20:37 -0700 2022
-bianca           pts/2    50.201.205.166   Tue Mar  5 06:44:34 -0700 2022
-charles          pts/11   24-148-60-31.s54 Thu Mar  7 12:25:04 -0700 2022
-cynthia          pts/7    50.201.205.166   Fri Mar  1 07:14:30 -0700 2022
-diosdavil        pts/14   50.201.205.166   Fri Mar  13 08:00:56 -0700 2022
-eric             pts/9    52.128.53.145    Fri Mar  13 08:20:44 -0700 2022
-jacob            pts/9    50.201.205.166   Fri Mar  13 08:26:18 -0700 2022
-paul             pts/4    c-174-61-216-170 Thu Mar  7 11:52:59 -0700 2022
-joseph           pts/8    c-24-19-26-16.hs Fri Mar  13 07:21:08 -0700 2022
-josia            pts/2    pool-173-79-196- Fri Mar  13 06:36:26 -0700 2022
-kendra           pts/3    136.152.38.144   Fri Mar  13 06:59:46 -0700 2022
-lawrence         pts/21   cpe-65-26-108-22 Wed Jun 29 07:30:09 -0700 2022
-ryan             pts/5    c-73-83-75-198.h Fri Mar  13 07:10:38 -0700 2022
-sabin            pts/10   c-73-109-19-22.h Fri Mar  13 07:22:55 -0700 2022
-sharrymae        pts/20   50.201.205.166   Wed Jun 29 13:40:02 -0700 2022
-sheraz           pts/1    89.187.183.152   Thu Mar  7 11:47:03 -0700 2022
-sunny            pts/9    096-042-091-103. Fri Mar  13 07:22:17 -0700 2022
-leo              pts/7    h67-204-152-3.be Thu Mar  7 11:47:20 -0700 2022
-tito             pts/3    174-21-100-18.tu Thu Jun 30 09:31:52 -0700 2022
-james            pts/33                    Wed Jun 29 11:26:21 -0700 2022
-cadmin                                     **Never logged in**
+james            pts/8    173.217.69.33    Mon Mar 13 09:45:16 -0700 2023
 paul2                                      **Never logged in**
-paul2                                      **Never logged in**
+clamupdate                                 **Never logged in**
+dockerroot                                 **Never logged in**
+salat                                      **Never logged in**
+yusuf                                      **Never logged in**
+aqadir                                     **Never logged in**
+zaki                                       **Never logged in**
+ansible          pts/1                     Tue Jun  6 13:29:15 -0700 2023
+dovecot                                    **Never logged in**
+dovenull                                   **Never logged in**
+angel            pts/3    c-73-181-242-150 Tue Dec  6 13:21:25 -0800 2022
+chantelle                                  **Never logged in**
+courtney                                   **Never logged in**
+jesse            pts/0    c-73-155-127-197 Sun Oct 29 20:04:56 -0700 2023
+keriise          pts/3    50.201.205.166   Mon Dec 12 14:41:00 -0800 2022
+mustafa                                    **Never logged in**
+oliver           pts/0    50.230.164.6     Mon Dec 12 14:26:52 -0800 2022
+richard                                    **Never logged in**
+ruby             pts/3    50.201.205.166   Tue Dec 13 08:41:32 -0800 2022
+ty               pts/7    c-73-225-118-202 Wed Dec  7 08:17:52 -0800 2022
+vincent          pts/0                     Tue Dec 13 13:30:49 -0800 2022
+mubarak          pts/3    174-141-203-105. Sat Nov 11 10:41:39 -0800 2023
+lexi             pts/2    c-24-19-89-245.h Mon Mar 13 08:10:02 -0700 2023
+clark            pts/10   50.201.205.166   Mon Mar 13 09:48:48 -0700 2023
+darrin           pts/6    097-084-085-068. Mon Mar 13 09:44:58 -0700 2023
+joshua           pts/13   194.61.41.77     Sun Mar 12 11:23:31 -0800 2024
+matthew          pts/0    pool-108-53-135- Mon Mar 13 08:00:18 -0700 2023
+rafael           pts/9    c-24-19-89-245.h Mon Mar 13 09:46:53 -0700 2023
+rhett            pts/11   cpe-198-255-175- Tue Mar 13 13:14:39 -0700 2023
+shawn                                      **Never logged in**
+spencer          pts/3    50.201.205.166   Mon Mar 12 08:27:52 -0700 2023
+trey             pts/1    c-73-57-55-57.hs Mon Mar 13 08:02:23 -0700 2023
+stephanie        pts/6    c-76-146-241-198 Tue Oct 24 15:00:10 -0700 2023
+stephen                                    **Never logged in**
+aidi             pts/0    c-24-19-89-245.h Fri Mar 24 08:24:29 -0700 2023
+terrance                                   **Never logged in**
+wade             pts/12                    Fri Sep 29 14:35:10 -0700 2023
+zackery          pts/0    107-137-90-79.li Sat Apr  1 11:34:57 -0700 2023
+kevin            pts/11   50.201.205.166   Sun Mar 12 12:47:38 -0800 2024
+tech1                                      **Never logged in**
+johnk            pts/6    76.146.241.198   Mon Jul 24 14:31:17 -0700 2023
+alan             pts/1    50.201.205.166   Tue May  9 10:14:31 -0700 2023
+alyssa           pts/8    50.201.205.166   Wed May  3 08:15:23 -0700 2023
+conor            pts/1                     Mon May  8 08:45:56 -0700 2023
+daniel           pts/5    lib-06-subnet-19 Tue Jun 20 20:43:28 -0700 2023
+derek            pts/12   208.93.179.74    Sun Mar 12 08:19:08 -0700 2023
+ervince          pts/0    c-73-138-225-221 Mon May  8 07:54:55 -0700 2023
+jake             pts/10   ip98-167-46-132. Tue Apr 18 08:05:50 -0700 2023
+jason            pts/0    pool-108-29-29-1 Thu Jun 22 19:10:04 -0700 2023
+joseph           pts/12   c-174-164-253-91 Mon Dec 18 09:06:26 -0800 2023
+nicolas          pts/4    c-66-235-12-82.s Mon May  8 08:23:54 -0700 2023
+reyce            pts/1    c-76-28-187-40.h Tue May  9 15:00:20 -0700 2023
+robert           pts/9    c-76-121-89-239. Sun Mar 12 10:58:50 -0800 2024
+shaquille        pts/1    c-73-109-198-133 Tue May  9 10:11:10 -0700 2023
+tyler            pts/7    cpe-174-105-45-7 Fri May  5 13:11:56 -0700 2023
+jordan           pts/5    47-34-237-24.gci Mon Apr 10 14:02:44 -0700 2023
+bryce            pts/10   ip70-177-113-32. Fri May  5 13:14:34 -0700 2023
+reyce2           pts/0                     Mon Apr 17 09:07:14 -0700 2023
+tommy                                      **Never logged in**
+emily                                      **Never logged in**
+barb                                       **Never logged in**
+testing3                                   **Never logged in**
+aaron            pts/5                     Mon Jul 10 08:21:47 -0700 2023
+amanuel          pts/0    50.201.205.166   Fri Jun  9 17:25:32 -0700 2023
+andrew           pts/2                     Wed May 24 08:26:01 -0700 2023
+byungin          pts/15   c-24-19-89-245.h Tue May 23 13:24:52 -0700 2023
+colton                                     **Never logged in**
+devante          pts/2    83.148.23.34.bc. Tue Jun 20 21:42:26 -0700 2023
+gabriela         pts/0    37.19.199.137    Wed Jun 14 08:25:13 -0700 2023
+jasmine          pts/0    c-73-42-220-205. Thu Jun 29 21:07:11 -0700 2023
+jociah           pts/16   23.94.57.236     Wed Jun  7 10:29:28 -0700 2023
+kwintin          pts/0                     Wed Jul  5 10:10:39 -0700 2023
+lucas            pts/7                     Tue Jul 11 11:39:25 -0700 2023
+maverick         pts/0    c-73-225-191-138 Sun Jun 25 12:49:38 -0700 2023
+steven           pts/3    172.56.153.195   Mon Jun 12 13:38:44 -0700 2023
+andrewc          pts/8    76.146.241.198   Wed Jun 14 09:12:50 -0700 2023
+andrewf          pts/4                     Thu Jun 22 12:44:43 -0700 2023
+andrewm          pts/5                     Thu Jun 22 12:55:08 -0700 2023
+charles          pts/0    37.120.215.243   Sun Jun 18 12:26:39 -0700 2023
+test2                                      **Never logged in**
+mm                                         **Never logged in**
+cliff                                      **Never logged in**
+steven2                                    **Never logged in**
+steven3                                    **Never logged in**
+cmason                                     **Never logged in**
+cmason2                                    **Never logged in**
+jimmy            pts/1                     Wed Jun  7 08:03:05 -0700 2023
+swaye            pts/1    76.146.241.198   Thu Jun 15 09:20:34 -0700 2023
+user99           pts/1                     Tue Jun 20 14:06:50 -0700 2023
+user999          pts/1                     Tue Jun 20 14:07:20 -0700 2023
+adrian           pts/3    c-76-106-31-45.h Fri Jul 21 08:19:47 -0700 2023
+carlson          pts/11   76.146.241.198   Mon Jul 31 12:55:20 -0700 2023
+cesar            pts/0    76.146.241.198   Thu Aug  3 11:23:48 -0700 2023
+dylon            pts/4    76.146.241.198   Wed Aug  2 14:44:22 -0700 2023
+jacob            pts/3    atlanta.example. Mon Jul 24 14:11:15 -0700 2023
+jared            pts/5    76.146.241.198   Mon Jul 31 08:46:16 -0700 2023
+jeremy           pts/21   50.201.205.166   Mon Jul 10 14:52:11 -0700 2023
+justin           pts/5    76.146.241.198   Tue Aug  1 12:30:27 -0700 2023
+luis             pts/4    76.135.1.171     Fri Jul 21 12:44:48 -0700 2023
+noah             pts/3    76.146.241.198   Wed Aug  2 08:25:32 -0700 2023
+paul             pts/1    76.146.241.198   Wed Jul 26 13:51:40 -0700 2023
+justin2                                    **Never logged in**
+jhanson                                    **Never logged in**
+jared2                                     **Never logged in**
+justin4                                    **Never logged in**
+luis2                                      **Never logged in**
+abdulahi         pts/1    65.154.51.15     Sat Jul 22 08:31:29 -0700 2023
+asiya            pts/1    c-75-73-6-182.hs Sat Nov  4 09:06:49 -0700 2023
+mohamoud         pts/2    107.4.165.198    Sat Nov 25 09:29:44 -0800 2023
+anisa                                      **Never logged in**
+ayub                                       **Never logged in**
+munge                                      **Never logged in**
+solaiman         pts/0                     Sun Oct  1 21:04:58 -0700 2023
+antonio          pts/0    102.129.223.140  Tue Oct 24 04:11:03 -0700 2023
+diamond          pts/13   50.201.205.166   Mon Oct 16 11:17:29 -0700 2023
+floyd            pts/0    50.175.48.134    Fri Nov  3 09:52:57 -0700 2023
+hectora          pts/0    c-24-19-82-23.hs Sat Nov 18 14:29:21 -0800 2023
+heckorm          pts/10   50.201.205.166   Tue Sep 26 13:43:44 -0700 2023
+himber           pts/5    seattle          Thu Oct 26 11:10:01 -0700 2023
+kaylab           pts/5                     Mon Nov 20 11:29:36 -0800 2023
+kendra           pts/12   50.201.205.166   Mon Oct 16 15:08:16 -0700 2023
+nicholas         pts/5    50.175.48.134    Mon Oct 16 14:51:20 -0700 2023
+steve            pts/7    50.201.205.166   Fri Oct  6 08:27:35 -0700 2023
+bad                                        **Never logged in**
+hectorm          pts/6    50.201.205.166   Mon Oct 16 14:53:13 -0700 2023
+ryan             pts/23   50.175.48.134    Tue Nov  7 08:44:20 -0800 2023
+manderson                                  **Never logged in**
+testuser         pts/9    50.201.205.166   Fri Oct 13 12:49:34 -0700 2023
+maryam           pts/5    c-107-4-165-198. Sat Nov  4 09:26:03 -0700 2023
+rahwa            pts/3    c-75-73-16-162.h Sat Nov 11 09:22:18 -0800 2023
+afaysal          pts/2    102.45.90.218    Sun Oct  1 10:37:18 -0700 2023
+abdirahman       pts/1    197.57.191.156   Mon Jan  1 04:25:36 -0800 2024
+alejandro        pts/4    50.175.48.134    Fri Dec  1 08:05:28 -0800 2023
+cody             pts/5    c-24-21-232-21.h Mon Dec 11 08:23:43 -0800 2023
+daiyron          pts/2    107-200-97-89.li Fri Dec  1 07:31:43 -0800 2023
+dexter           pts/6    216.86.81.114    Mon Dec 11 08:23:50 -0800 2023
+edrick           pts/3    c-67-170-2-170.h Mon Dec 11 08:22:27 -0800 2023
+erron            pts/1    076-182-112-038. Sat Dec 30 10:14:36 -0800 2023
+franklyn         pts/1    208.71.101.186   Thu Dec  7 13:47:06 -0800 2023
+greg             pts/4    c-73-187-49-68.h Mon Dec  4 08:52:49 -0800 2023
+jose             pts/0    142-129-201-153. Wed Dec  6 19:04:29 -0800 2023
+kevind           pts/3    50.175.48.134    Mon Dec  4 08:13:03 -0800 2023
+kevinw           pts/3                     Tue Dec 12 12:56:57 -0800 2023
+kharis           pts/7    seattle          Mon Dec 11 08:24:36 -0800 2023
+michael          pts/12   c-73-239-83-126. Mon Dec  4 09:28:18 -0800 2023
+mingmar          pts/10   141.155.168.17   Mon Dec  4 09:28:05 -0800 2023
+rakeem           pts/11   154.6.88.145     Mon Dec 11 08:30:57 -0800 2023
+scott            pts/10   c-73-140-88-60.h Mon Dec 11 08:30:35 -0800 2023
+stafford         pts/3    50.201.205.166   Mon Dec 11 13:16:10 -0800 2023
+stefan           pts/1    c-67-190-2-218.h Wed Dec 20 12:08:34 -0800 2023
+christian        pts/0    50.175.48.134    Thu Nov 30 11:18:33 -0800 2023
+christopher      pts/12   50.201.205.166   Mon Dec 11 09:01:00 -0800 2023
+goodguy                                    **Never logged in**
+user1            pts/4                     Mon Nov 13 10:55:25 -0800 2023
+user2                                      **Never logged in**
+user3                                      **Never logged in**
+user4                                      **Never logged in**
+hhh                                        **Never logged in**
+jimbo                                      **Never logged in**
+anthony1         pts/16   24.26.208.99     Sun Mar 12 12:45:59 -0800 2024
+anthony2         pts/14   50.201.205.166   Wed Jan  3 13:43:28 -0800 2024
+breanna          pts/5    73.221.190.99    Sun Mar 12 12:33:15 -0800 2024
+clifford         pts/6    071-090-193-068. Sun Mar 12 08:40:25 -0800 2024
+dontre           pts/9    50.201.205.166   Thu Jan  4 10:14:15 -0800 2024
+eleno            pts/2    173.24.145.104   Sun Mar 12 14:07:43 -0800 2024
+ian1             pts/4    c-76-97-244-227. Sun Mar 12 10:58:15 -0800 2024
+ian2             pts/0    50.201.205.166   Wed Jan 10 14:10:52 -0800 2024
+ivie             pts/7    216.220.84.215   Sun Mar 12 12:47:52 -0800 2024
+john             pts/40   h135-135-179-175 Wed Jan 10 13:27:11 -0800 2024
+jonathan         pts/1    97.124.54.210    Sun Mar 12 12:32:41 -0800 2024
+karla            pts/0    50.201.205.166   Wed Jan 10 14:25:32 -0800 2024
+kenny            pts/37   50.201.205.166   Wed Jan 10 13:09:56 -0800 2024
+mikayla          pts/15   67.149.206.162   Sun Mar 12 12:40:18 -0800 2024
+orlando          pts/17   66.187.200.30    Sun Mar 12 12:48:19 -0800 2024
+seth             pts/19   35.139.156.78    Sun Mar 12 12:48:31 -0800 2024
+tommie           pts/2    c-73-240-74-171. Sun Mar 12 07:21:19 -0800 2024
+joan             pts/0    50.201.205.166   Wed Jan 10 14:17:56 -0800 2024

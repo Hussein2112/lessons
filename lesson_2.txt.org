@@ -11,6 +11,8 @@
 6- Why is sudo preferred more than switching to root?
 
 
+7- What is sudoedit command used for?
+
 8- What is th difference between sudo and sudoedit
 
 

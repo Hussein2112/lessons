@@ -40,7 +40,6 @@
    visudo is the appropriate way to edit /etc/sudoers file because
    it verifies the syntax before committing changes to th file.
 
-   https://centoshelp.org/security/sudo-an-advanced-howto/
 
 10- Explain the role of the directory /etc/skel and the file /etc/login.defs in user creation?
     /etc/skel contains the files that new user's home directory will populated with.

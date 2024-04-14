@@ -1,31 +1,34 @@
-Lesson1
+Lesson1 --- For Linux Begginers
 
 File Management
 
 ====================
 Start practicing after you login for the first time:
-Let us first create the files to practice with:
+Let us first create the files and directories to practice with:
 
-touch file1 file2 file3 file4 file11 file12    #This command will create the 6 files listed
-touch ab{1..12}                                #This command will create files ab1 to ab12
-touch xyz{1..4}.txt                        #This command creates files xyz1.txt - xyz4.txt
-date --i                                  # this commands shows YYYY-MM-DD
+#mkdir ~/project       #The ~ (tilde) represents your home directory.
+#cd ~/project
+#touch file1 file2 file3 file4 file11 file12    #This command will create the 6 files listed
+Run the following command to see the files that you created
+#ls -l
+#touch ab{1..12}                                #This command will create files ab1 to ab12
+#touch xyz{1..4}.txt                        #This command creates files xyz1.txt - xyz4.txt
+#date --i                                  # this commands shows YYYY-MM-DD
 
-touch file_$(date --i).log           
-touch file_$(date --i)_{1..10}.log
-touch {2015,2016,2017,2018}.{q1,q2,q3,q4}
+#touch file_$(date --i).log           
+#touch file_$(date --i)_{1..10}.log             #No need to run this command
+#touch {2015,2016,2017,2018}.{q1,q2,q3,q4}      #No need to run this command
 
 Now let us get started with basic commands:
 --------------------------------------------
 
-ls            #list files in the current directory. No file attributes displayed just names
-ls -al        #List all files including hidden ones and their attributes(permissions/ownership)
-ls -ltr       #List all files in reverse order by time. Newest ones listed at the bottom.
-ls -lh        #List all files with attributes. Show their size in Human readable format
-ls -ltr /var/log               #list the files in /var/log in reverse order by time showing newest ones at the bottom.
-ls -l xyz[1-3]*               #List all files with name starting with xyz1 or xyz2 or xyz3 followed by other characters.
-ls -l [af]*                   #List all files that start with a or f followed by other characters.
-ls -l ab??                    #List the files with name starting with ab followed by two characters
+#ls            #list files in the current directory. No file attributes displayed just names
+#ls -al        #List all files including hidden ones and their attributes(permissions/ownership)
+#ls -ltr       #List all files in reverse order by time. Newest ones listed at the bottom.
+#ls -lh        #List all files with attributes. Show their size in Human readable format
+#ls -l xyz[1-3]*               #List all files with name starting with xyz1 or xyz2 or xyz3 followed by other characters.
+#ls -l [af]*                   #List all files that start with a or f followed by other characters.
+#ls -l ab??                 #List the files with name starting with ab followed by two characters
 
 echo command examples:
 -----------------------
@@ -40,9 +43,10 @@ pwd                                         #Displays the current working direct
 cd command examples:
 -------------------------
 cd                       #Takes you to your current user's home directory...Same as cd ~
-cd ~cadmin               #Will take you to user cadmin home directory provided you have permission to access that user's directory.
+cd ~mahdi               #Will take you to user mahdi home directory provided the user mahdi exists and that  you have permission to access that user's directory.
 cd -                     #Will take you to the last directory your were in
 cd /etc                  #Will take you to the /etc directory
+cd                        #Will take you to your home directory
 cd mydir                 #Will take you to the directory named mydir which if it is under your current directory.
 cd ../                   #Go back one directory from your current directory
 cd ../..                 #Go back two directories back from your current directory
@@ -53,74 +57,76 @@ More touch command examples:
 
 touch file1 file2 file3 file4 file11 file12   # Will create all these files. Provided you have permission to create files in that directory.
 touch -t 2006221010 Downloads  # YYMMDDHHMM.ss # will change the timestamp of the Downloads directory
-touch -f /var/log/messages
+tail -f /var/log/messages
 
 
 cp command examples:
 -------------------
-cp file1 file2                               #Will copy file1 to file2
-cp -r /home/cadmin/dir1 /tmp/dir1            #Will copy that directory contents recursively to /tmp/dir1
+#cp file1 file2                               #Will copy file1 to file2
+#cp -r /home/mahdi/dir1 /tmp/dir1            #Will copy that directory contents recursively to /tmp/dir1
 
 mkdir command examples:
 -------------------------
-mkdir dir1                          #Creates dir1 in your current location provided you have the permission to do so.
-mkdir /tmp/dir1                    #Creates dir1 in /tmp. Provided that directory was not created already by another user.
+#mkdir dir1                          #Creates dir1 in your current location provided you have the permission to do so.
+#mkdir /tmp/dir1                    #Creates dir1 in /tmp. Provided that directory was not created already by another user.
 
 mv command examples:
 -------------------
 
-mv dir1 dir2                                #if dir2 does NOT exit, this command renames dir1 to dir2 But if dir2 exit then 
+#mv dir1 dir2                                #if dir2 does NOT exit, this command renames dir1 to dir2 But if dir2 exit then 
 					     it will move dir1 into dir2
-mv file1 /tmp                               #moves file1 from current directory to /tmp
-mv file2 /tmp/file3                         #moves file2 from current directory to /tmp renaming it to file3
+#mv file1 /tmp                               #moves file1 from current directory to /tmp
+#mv file2 /tmp/file3                         #moves file2 from current directory to /tmp renaming it to file3
 
 
 rm command examples:
 -----------------------
-rm xyz*                           #Removes all files with names starting with xyz. Must have permission to
-rm file??                         #Removes any file the starts with file followed by two other characters. Must permission
-rm -rf /tmp/*                     #Removes all the files /tmp without prompting. Must be root
-rmdir dir1                        #This command will remove the directory named dir1 only if it is empty.
+#rm xyz*                           #Removes all files with names starting with xyz. Must have permission to
+#rm file??                         #Removes any file the starts with file followed by two other characters. Must permission
+#rm -rf /tmp/*                     #Removes all the files /tmp without prompting. Must be root
+#rmdir dir1                        #This command will remove the directory named dir1 only if it is empty.
 
 
 cat command examples:
 ---------------------
-cat file1                                #Displays the contents of file1 on the screen
-cat file1 > file2                        #Writes contents of file1 to file2. Overwrites anything that was written in file2
-cat /var/log/messages                    #Displays the contents of the messages file on the screen.
+#cat file1                                #Displays the contents of file1 on the screen
+#cat file1 > file2                        #Writes contents of file1 to file2. Overwrites anything that was written in file2
+#cat /var/log/messages                    #Displays the contents of the messages file on the screen.
 
 
 tail command examples:
 ---------------------
 
-tail -f /var/log/messages               #Displays the last ten lines and also any new content that is written to the file /var/log/messages
-tail /var/log/messages                  #Displays the last 10 lines
-tail -20 /var/log/messages              #Displays the last 20 lines
+#tail -f /var/log/messages               #Displays the last ten lines and also any new content that is written to the file /var/log/messages
+#tail /var/log/messages                  #Displays the last 10 lines
+#tail -20 /var/log/messages              #Displays the last 20 lines
 
 head command examples:
 ----------------------
-head -15 /etc/passwd                    #Displays the top 15 lines
+#head -15 /etc/passwd                    #Displays the top 15 lines
 
 File Editing Commands
 ======================
-vim    # vim cheatsheet https://vim.rtorr.com/
+#vim    # vim cheatsheet https://vim.rtorr.com/
 nano
 gedit
 
 visudo                                               #edits the file /etc/sudoers..Checks for Syntax errors
+https://centoshelp.org/security/sudo-an-advanced-howto/
+
 sudoedit   # %editors ALL = sudoedit /path/to/file   #Allows members of the group editors to edit the file /path/to/file
 
 PowerManagement
 ==================
-shutdown -h now       # Shuts down with no delay.
-shutdown -h -t 90     # Shuts down in 90 seconds.
-shutdown -r now       # Reboots with no delay.
-systemctl reboot      #Reboots ... Centos 7 and higher
-systemctl poweroff    #Poweroff ...Centos 7 and higher
-init 0                #Poweroff ...Works on Old and New Linux
-init 6                #Reboot ...Works on Old and New Linux
-init 3                #Multiuser with NO GUI ...Works on Old and New Linux
-init 5                #Multiuser with GUI    ...Works on Old and New Linux
+#shutdown -h now       # Shuts down with no delay.
+#shutdown -h -t 90     # Shuts down in 90 seconds.
+#shutdown -r now       # Reboots with no delay.
+#systemctl reboot      #Reboots ... Centos 7 and higher
+#systemctl poweroff    #Poweroff ...Centos 7 and higher
+#init 0                #Poweroff ...Works on Old and New Linux
+#init 6                #Reboot ...Works on Old and New Linux
+#init 3                #Multiuser with NO GUI ...Works on Old and New Linux
+#init 5                #Multiuser with GUI    ...Works on Old and New Linux
 
 
 Switch User commands
@@ -131,7 +137,7 @@ The sudo commands will only work if your current user has sudo privileges. For e
 su - root               #Switch user to root
 su -                    #Swith user to root
 su root                #Switch to root but keeps old user's environment...not recommended especially for new users
-su - cadmin            #Switch to user cadmin
+su - mahdi            #Switch to user mahdi
 
 sudo su -             #Swith to root only if your user is a member of wheel group..Provide current user's password.
 sudo rm -f file1      #Remove file1 using sudo without being prompted. 
@@ -175,13 +181,13 @@ useradd -s /bin/ksh susan                              #Add user susan and assin
 useradd -D                                             #View default config for new users
 
 passwd                                        #Change your current user's password 
-passwd cadmin                                 #Change user cadmin's password. Must be root etc
-getent passwd cadmin                          #Find out if user cadmin exists on your system. Either locally or thru Directory Services
+passwd mahdi                                 #Change user mahdi's password. Must be root etc
+getent passwd mahdi                          #Find out if user mahdi exists on your system. Either locally or thru Directory Services
 getent group mkt                              #Find out if group mkt exists on your system. Either locally or thru Directory Services                               
 
 chage -E 2022/12/31 susan                         #Change the expiry date of user susan to that date
-chage -E $(date -d +180days +%Y-%m-%d) cadmin     #Change user cadmin expiry to 180 days from today
-chage -l cadmin                                   #Show account aging information
+chage -E $(date -d +180days +%Y-%m-%d) mahdi     #Change user mahdi expiry to 180 days from today
+chage -l mahdi                                   #Show account aging information
 chage -M 90 mike                                  #Set the maximum number of days (to 90) during which a password is valid
 chage -m 3 mike                                   #Set the minimum number of days between password changes to 3.
 chage -W 7 mike                                   #Set the number of days of warning before a password change to 7
@@ -281,7 +287,7 @@ r     w    x
 1 0 1  = 5 = r-x
 1 1 0  = 6 = rw-
 1 1 1  = 7 = rwx
-
+-rwxr-xr--.  1 salat salat  420 Sep 10 08:24 xyz.txt
 
 umask                    # This command will display the current umask
 umask 002                # This command will set your umask to 002
@@ -330,7 +336,7 @@ lsattr -d dir1   #List directories like files instead of their content
 ACLs
 --------
 getfacl file1                                       #Retrieve ACLs of file1
-setfacl -m u:cadmin:rwx file1                       #Give cadmin Full permission to file1
+setfacl -m u:mahdi:rwx file1                       #Give mahdi Full permission to file1
 setfacl -m u:susan:7 file1                          # Give Susan Full permission to file1
 setfacl -b file                                     #Remove All ACL Entries
 
@@ -420,4 +426,4 @@ Links
 ======
 ln -s /var/log logs         #Creates a soft link called logs of /var/log
 ln fila fileb               #Creates a hard link called fileb of filea
-
+.

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration-line: overline;
+  text-decoration-line: underline;
+}
+
+h2 {
+  color: black;
+  text-align: left;
+  text-decoration-line: underline;
+}
+
+h3 {
+  text-shadow: 2px 2px 5px red;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  text-decoration-line: underline;
+}
+</style>
+</head>
+<body>
+
+<h1>Final Exercise</h1>
+<p></p>
+
+
+
+<h2>Introduction</h2>
+<p>Before you start this exercise, ensure you</p>
+<p> A- add a second network adapter to your Centos Server. Add the adapter  as a  "Bridged Adapter"</p>
+<p> B- Add three disks on your Server. Each disk should be 1G each </p>
+
+
+<h2>Questions</h2>
+1- change the timezone of your Server (VM) to Los-Angeles</p>
+
+Answer:</p>
+   A- One way to change the timezone is</p>
+      First list the timezones and use  grep to get the timezone you are looking for.</p>
+      Example:</p>
+            <h3> timedatectl list-timezones |grep -i angeles</h3></p>
+	      <h3>timedatectl set-timezone America/Los_Angeles</h3></p>
+		     
+	   B- Another way to  change timezone would be with the following command:</p>
+		     <h3>ln -sf /usr/share/zoneinfo/America/Los_Angeles  /etc/localtime</h3></p>
+
+   C- A third way to change the timezone is as follows:</p>
+             <h3>export TZ=America/Los_Angeles</h3></p>
+
+      You can add this command to your .bashrc or .bash_profile  for future processing
+</p>
+
+2- find out the language and confirm it is set to en_US with UTF8(US English)</p>
+     A- One way to confirm the LANG variable:</p>
+        <h3>echo $LANG</h3></p>
+     B- <h3>locale</h3></p>
+   
+    
+3- Create a user called devuser. Set a password for that user</p>
+   <h3>useradd devuser</h3></p>
+   <h3>echo devuserpass |passwd --stdin devuser</h3></p>
+
+
+3a- Create a Group called devops</p>
+    <h3>groupadd devops</h3></p>
+4- Make that user a member of the devops and wheel groups</p>
+    <h3>usermod -aG devops devuser</h3></p>
+5- Create a VolumeGroup Called sharedvg. Use Only one Disk.</p>
+    <h3>pvcreate /dev/sdc1</h3></p>
+    <h3>vgcreate sharedvg /dev/sdc1</h3></p>
+   Create a Logical Volume Called sharedlv. 100M in size</p>
+    <h3>lvcreate -L 100M -n sharedlv sharedvg</h3></p>
+    
+   Create a ext4 filesystem on sharedlv</p>
+    <h3>mkfs -t ext4 sharedlv</h3></p>
+   create a mountpoint called /shared and mount it persistently</p>
+    <h3>mkdir /shared</h3></p>
+    <h3>echo "/dev/mapper/sharedvg-sharedlv  /shared ext4 defaults 0 0" >> /etc/fstab</h3></p>
+    Mount it then create 10 files in it.  file1 to file10</p>
+    <h3>mount -a</h3></p>
+    Confirm that /shared got mounted with the following command</p>
+    <h3><p>df -h</h3></p>
+    <p>Switch to /shared and create the files</p>
+    <h3><p>cd /shared; touch file{1..10}</h3></p>
+
+6- change the group of the directory and ensure the permissions </p>
+   of the directory are set to read/write and execute for owner and group.</p>
+    <h3><p>chown devuser.devuser /shared</h3></p>
+    <h3><p>chmod 770 /shared</h3></p>
+   -Set the SGID bit set on the /shared directory.</p>
+    <h3><p>chmod g+s /shared</h3></p>
+    <p>Or</p>
+    <h3><p>chmod 2770 /shared</h3></p>
+ 
+7- what is the IP address for enp0s3 and enp0s8</p>
+<h3>ip a</h3></p>
+
+8- Make sure the user devops expires on the 12/5/2023 </p>
+   <h3>usermod -e 12/5/2023 devops</h3></p>
+
+9- We changed our mind so Get rid of the expiration date for devuser</p>
+   <h3>chage -E -1 username</h3></p>
+
+
+10- Create a user called susan and make sure that susan has rwx</p>
+    to the directory /shared. Only susan should have that access level.</p>
+    <h3>sudo setfacl -m u:susan:7 /shared</h3></p>
+11- Confirm your server is set to runlevel 3</p>
+    and if not set it to run level 3</p>
+    Change the default target to graphical.target and reboot</p>
+
+12- Ensure that SELinux is set to Enforcing mode. If not set it to enforcing mode</p>
+     
+
+
+13- Install nginx webserver </p>
+    <h3>yum install -y nginx   </h3> </p>
+
+14- Make sure that the webserver is set to startup after a reboot.</p>
+    #<h3>systemctl enable nginx</h3></p>
+
+15- Download the index.html file in atlanta /var/www/html/index.html</p>
+    to your Web Server's DocumentRoot</p>
+    Answer:</p>
+    <h3>cd /var/www/html</h3></p>
+    <h3>wget 45.32.212.147:8080/index.html</h3></p>
+
+
+16- See if your Cohort can access that the website.</p>
+  But first you can access it locally</p>
+   <h3>http://localhost </h3></p>
+
+
+
+17- Change the ssh port of your server from 22 to 2200 and make sure that takes effect immediately. </p>
+    Make sure you read the line above the port in the config file.</p>
+    Which pertains to SELinux.</p>
+   <h3>vim /etc/ssh/sshd_config </h3></p>
+    Restart or reload the sshd service so that the change in the config file takes effect</p>
+   <h3>systemctl reload sshd </h3></p>
+
+    
+18- Change the webserver port to 8080. Restart the WebServer and Confirm </p>
+    that the WebServer is listening on port 8080</p>
+
+19- Download the stress package as rpm. (No Install..just download)</p>
+    <h3>yum install --downloaddir=/packages --downloadonly stress</h3></p>
+
+
+20- Install the stress package that you downloaded above then remove it. </p>
+    <h3>#rpm -ivh /packages/stress-1.0.4-16.el7.x86_64.rpm</h3></p>
+    or</p>
+    <h3>#yum localinstall /packages/stress-1.0.4-16.el7.x86_64.rpm</h3></p>
+20a- Confirm that the package stress is now installed.</h3></p>
+     <h3>rpm -qa |grep stress</h3></p>
+     or</p>
+     <h3>yum list installed |grep stress</h3></p>
+
+
+21- Change the grub time out to 20 seconds.</p>
+    <h3>#vim /etc/default/grub and change the timeout field.</h3></p>
+    <h3>#grub2-mkconfig -o /boot/grub2/grub.cfg</h3></p>
+
+22- Add a disk to your server. Assuming the disk name is /dev/sdb,</p>
+    create a partition using fdisk. </p>
+    Then create a xfs filesystem on /dev/sdb1 and mount it</p>
+    on /opt  using systemd</p>
+    After Creating the LV or partition use the following </p>
+    systemd unit file to mount it instead of /etc/fstab</p>
+  
+<h3>vim /etc/systemd/system/opt.mount</h3></p>
+==========================================</p>
+[Unit]</p>
+Before=local-fs.target</p>
+
+[Mount]</p>
+What=/dev/mapper/vgname-lvname</p>
+Where=/opt</p>
+Type=xfs</p>
+Options=defaults,usrquota,grpquota</p>
+
+[Install]</p>
+WantedBy=multi-user.target</p>
+==========================================</p>
+Save the file.</p>
+# systemctl daemon-reload opt.mount</p>
+#systemd-analyze verify opt.mount</p>
+#systemctl cat opt.mount</p>
+
+#systemctl list-dependencies</p>
+#systemctl status opt.mount</p>
+systemctl enable opt.mount</p>
+#systemctl start opt.mount</p>
+
+23- Create a 1G file in /opt. Name the file 1GFile</p>
+    A- Using the du command, identify the biggest files in /opt</p>
+
+
+24- What device driver is your network card enp0s3 using.</p>
+    What is the version of that device driver</p>
+   <h3>#lshw -c network</h3></p>
+
+26- Unload the NIC kernel module (Device Driver) and see what happens to </p>
+    the output of the command "ip a" </p>
+    Is the interface still there.</p>
+    Confirm the kernel module is no longer loaded.</p>
+
+27- Load the NIC kernel module and ensure you can ping google.com</p>
+
+28- If not already, ensure you can ssh to seattle using ssh keys.</p>
+
+ 29-</p>
+  A- tar up and compress (gzip) all the files in /shared</p>
+  B- Using the scp command, copy the tar file</p>
+     to your home directory in seattle
+<p> 30- Create a NFS Server and NFS Client.</p>
+     Use the link below for examples.</p>
+
+     Use the link below for examples.</p>
+     http://45.32.212.147:8080/text/nfs.txt</p>
+
+
+
+
+
+
+
+31- After making sure that you can scp the files in #29,</p>
+    create a cron job that automates the scp every Sunday at 1:45 AM</p>
+
+
+32-  Create two more users, emily and ethan and make them members of the</p>
+     engineering team. These two users need access to the files in /shared</p>
+     But they want to access /shared as /engineering not /shared.</p>
+Bonus 1:</p>
+Lynis Auditing</p>
+
+The final step on your administrator's list involves running </p>
+an audit against the system in order to harden it. </p>
+You'll use the system and security auditing tool Lynis to do so.</p>
+
+A. Install the Lynis package to your system if it is not already installed.</p>
+B. Run a Lynis system audit</p>
+   <h3>#lynis system audit</h3></p>
+
+Bonus 2</p>
+1-Confirm  </p>
+A- That your machine is a virtual machine and not a physical machine</p>
+B- What is the Operating System and the Kernel version of your server</p>
+
+</body>
+</html>

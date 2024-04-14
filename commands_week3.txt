@@ -639,4 +639,9 @@ Separates hardware into types.
 Verify if devices are connected and their supported features.
 DMI tables are often inaccurate or incomplete.
 Don't rely on them as sole source of info.
+-------------------------------------------------------------
 
+
+Extra commands:
+The nc command explained
+https://phoenixnap.com/kb/nc-command

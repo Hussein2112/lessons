@@ -1,0 +1,126 @@
+1- An administrator accidentally deleted the /boot/vmlinuz file and must resolve the issue before the server is rebooted. Which of the following commands should the administrator use to identify the correct version of this file?
+A. rpm -qa | grep kernel; uname -a
+B. yum -y update; shutdown -r now
+C. cat /etc/centos-release; rpm -Uvh --nodeps
+D. telinit 1; restorecon -Rv /boot
+
+
+2- A cloud engineer needs to change the secure remote login port from 22 to 49000. Which of the following files should the engineer modify to change the port number to the desired value?
+A. /etc/host.conf
+B. /etc/hostname
+C. /etc/services
+D. /etc/ssh/sshd_config
+
+
+Explain the following command:
+3- find /var/log -maxdepth 1 -type f |grep "log.[1-6]$"  > /tmp/tempfile
+
+4- Which of the following technologies can be used as a central repository of Linux users and groups?
+A. LDAP
+B. MFA
+C. SSO
+D. PAM
+
+5- A systems administrator needs to clone the partition /dev/sdc1 to /dev/sdd1. Which of the following commands will accomplish this task?
+A. tar -cvzf /dev/sdd1 /dev/sdc1
+B. rsync /dev/sdc1 /dev/sdd1
+C. dd if=/dev/sdc1 of=/dev/sdd1
+D. scp /dev/sdc1 /dev/sdd1
+
+6-A systems administrator requires that all files that are created by the user named web have read-only permissions by the owner. Which of the following commands will satisfy this requirement?
+A. chown web:web /home/web
+B. chmod -R 400 /home/web
+C. echo "umask 377" >> /home/web/.bashrc
+D. setfacl read /home/web
+
+7- A systems administrator is checking the system logs. The administrator wants to look at the last 20 lines of a log. Which of the following will execute the command?
+A. tail -v 20
+B. tail -n 20
+C. tail -c 20
+D. tail -l 20
+
+8- A Linux administrator was tasked with deleting all files and directories with names that are contained in the toDelete.txt file. Which of the following commands will accomplish this task?
+A. xargs -f cat toDelete.txt -rm
+B. rm -d -r -f toDelete.txt
+C. cat toDelete.txt | rm -frd
+D. cat toDelete.txt | xargs rm -rf
+
+9- A Linux administrator wants to set the SUID of a file named dev_team.text with 744 access rights. Which of the following commands will achieve this goal?
+A. chmod 4744 dev_team.txt
+B. chmod 744 --setuid dev_team.txt
+C. chmod -c 744 dev_team.txt
+D. chmod -v 4744 --suid dev_team.txt
+
+
+
+10- A developer has been unable to remove a particular data folder that a team no longer uses. The developer escalated the issue to the systems administrator. The following output was received when commands where attempted.
+ 
+1- rmdir data/
+   Operation Not permitted
+
+2- rm -rf data/ 
+   Operation Not Permitted
+
+3- mv data mydata
+   Operation Not Permitted
+
+4- cd data ; cat > test.txt
+   Permissio denied
+
+Which of the following commands can be used to resolve this issue?
+A. chgrp -R 755 data/
+B. chmod -R 777 data/
+C. chattr -R -i data/
+D. chown -R data/
+
+
+11- To harden one of the servers, an administrator needs to remove the possibility of remote administrative login via the SSH service. Which of the following should the administrator do?
+A. Add the line DenyUsers root to the /etc/hosts.deny file.
+B. Set PermitRootLogin to no in the /etc/ssh/sshd_config file.
+C. Add the line account required pam_nologin. so to the /etc/pam.d/sshd file.
+D. Set PubKeyAuthentication to no in the /etc/ssh/ssh_config file.
+
+12- A Linux administrator wants to find out whether files from the wget package have been altered since they were installed. Which of the following commands will provide the correct information?
+A. rpm -i wget
+B. rpm -qf wget
+C. rpm -F wget
+D. rpm -V wget
+
+
+13- A Linux engineer has been notified about the possible deletion of logs from the file /opt/app/logs. The engineer needs to ensure the log file can only be written into without removing previous entries.
+ 
+#lsatt /opt/app/logs
+ ---------e--- logs
+Which of the following commands would be BEST to use to accomplish this task?
+A. chattr +a /opt/app/logs
+B. chattr +d /opt/app/logs
+C. chattr +i /opt/app/logs
+D. chattr +c /opt/app/logs
+
+
+14- A Linux administrator needs to remove software from the server. Which of the following RPM options should be used?
+A. rpm -s
+B. rрm -d
+C. rpm -q
+D. rpm -e
+
+15- Based on an organization’s new cybersecurity policies, an administrator has been instructed to ensure that, by default, all new users and groups that are created fall within the specified values below.
+ 
+------------------------------------
+# Min/max values for automatic uid selection in useradd
+#
+UID_MIN                  1000
+UID_MAX                 60000
+#
+# Min/max values for automatic gid selection in groupadd
+#
+GID_MIN                  1000
+GID_MAX                 60000
+--------------------------------------
+
+
+To which of the following configuration files will the required changes need to be made?
+A. /etc/login.defs
+B. /etc/security/limits.conf
+C. /etc/default/useradd
+D. /etc/profile

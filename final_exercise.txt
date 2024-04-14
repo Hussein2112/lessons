@@ -1,0 +1,121 @@
+Before you start this exercise, ensure you to:
+ A- add a second network adapter and "Bridged Adapter"
+ B- Add three disks on your Server. 1G each
+
+
+1- change the timezone of your Server (VM) to Los-Angeles
+2- find out the language and confirm it is set to en_US with UTF8(US English)
+3- Create a user called devuser. Set a password for that user
+3a- Create a Group called devops
+4- Make that user a member of the devops and wheel groups
+5- Create a VolumeGroup Called sharedvg. Use Only one Disk.
+   Create a Logical Volume Called sharedlv. 100M in size
+   Create a ext4 filesystem on sharedlv
+   create a mountpoint called /shared and mount it persistently
+    using /etc/fstab create 10 files in it.  file1 to file10
+Below is a link with examples:
+http://45.32.212.147:8080/text/pv_vg_lv_commands.txt
+
+
+6- change the group of the directory and ensure the permissions 
+   of the directory are set to read/write and execute for the 
+   owner and group.
+   -Set the SGID bit set on the /shared directory.
+
+ 
+7- what is the IP address for enp0s3 and enp0s8
+ip a
+
+8- Make sure the user devops expires on the 
+   12/5/2023 date
+
+9- We changed our mind so Get rid of the expiration date for devuser
+
+
+10- Create a user called susan and make sure that susan has rwx
+    the directory /shared. Only susan should have that access level.
+
+    sudo setfacl -m u:susan:7 /shared
+
+11- Confirm your server is set to runlevel 3
+    and if not set it to run level 3
+    Change the default target to graphical.target and reboot
+
+12- Ensure that SELinux is set to Enforcing mode. If not set it to enforcing mode
+     
+
+
+13- Install nginx webserver 
+
+14- Make sure that the webserver is set to startup after a reboot.
+
+15- Download the index.html file in atlanta /var/www/html/index.html
+    to your Web Server's DocumentRoot
+  Here is the DocumentRoot for nginx
+  /usr/share/nginx/html/
+
+16- See if your Cohort can access that the website.
+  But first you can access it locally
+   http://localhost 
+
+
+
+17- Change the ssh port of your server from 22 to 2200 and make sure that takes effect immediately. Make sure you read the line above the port in the config file.
+    
+18- Change the webserver port to 8080. Restart the WebServer and Confirm 
+    that the WebServer is listening on port 8080
+
+19- Download the stress package as rpm. (No Install..just download)
+    yum install --downloaddir=/packages --downloadonly stress
+
+
+20- Install the stress package that you downloaded above then remove it. 
+
+21- Change the grub time out to 20 seconds.
+
+22- Add a disk to your server. Assuming the disk name is /dev/sdb,
+    create a partition using fdisk. 
+    Then create a xfs filesystem on /dev/sdb1 and mount it
+    on /opt  using systemd
+    After Creating the LV or partition use the following 
+    systemd unit file to mount it instead of /etc/fstab
+  
+    A- Using the du command, identify the biggest files in /opt
+
+
+24- What device driver is your network card enp0s3 using.
+    What is the version of that device driver
+
+26- Unload the NIC kernel module (Device Driver) and see what happens to 
+    the output of the command "ip a" 
+    Is the interface still there.
+    Confirm the kernel module is no longer loaded.
+
+27- Load the NIC kernel module and ensure you can ping google.com
+
+28- If not already, ensure you can ssh to seattle using ssh keys.
+
+29- 
+ A- tar up and compress (gzip) all the files in /shared
+  B- Using the scp command, copy the tar file 
+     to your home directory in seattle 
+
+30- Create a NFS Server and NFS Client.
+    Use the link below for examples.
+
+    Use the link below for examples.
+    http://45.32.212.147:8080/text/nfs.txt
+
+
+
+31 -  Lynis Auditing
+
+The final step on your administrator's list involves running 
+an audit against the system in order to harden it. 
+You'll use the system and security auditing tool Lynis to do so.
+
+A. Install the Lynis package to your system if it is not already installed.
+B. Run a Lynis system audit
+
+Bonus
+1-Confirm that your machine is a virtual machine and not a physical machine

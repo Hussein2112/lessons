@@ -37,7 +37,7 @@
 11- What are the two main methods that initialize a Linux System?
 
 
-12- Which the newer method of initializing a Linux System?
+12- What the newer method of initializing a Linux System?
 
 
 
@@ -49,7 +49,7 @@
 
 
 
-15- What command do we use to stop, start or check the status of a server.
+15- What command do we use to stop, start or check the status of a service.
 
 
 16- Explain the following commands.
@@ -112,7 +112,7 @@ D.  systemctl on <name>.service
 
 3-
 A configuration management tool running every minute is enforcing the service HTTPd to be started. To perform maintenance, which of the
-following series of commands can be used to prevent the service from being started?
+following series of commands can be used to prevent the service from being sstarted?
 A.  systemctl stop httpd && systemctl mask httpd
 B.  systemctl disable httpd && systemctl mask httpd
 C.  systemctl stop httpd && systemctl hide httpd

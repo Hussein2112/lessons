@@ -1,0 +1,107 @@
+root:x:0:0:root:/root:/bin/bash
+jay2:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:998:996::/var/lib/chrony:/sbin/nologin
+apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+stdnt16:x:1001:1001::/home/stdnt16:/bin/bash
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+cockpit-ws:x:997:994:User for cockpit-ws:/nonexisting:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+sachit:x:1014:1014::/home/sacchidanand:/bin/bash
+chris:x:1004:1004::/home/christopher:/bin/bash
+setroubleshoot:x:996:993::/var/lib/setroubleshoot:/sbin/nologin
+mahdi:x:1080:1085::/home/mahdi:/bin/bash
+mysql:x:27:27:MariaDB Server:/var/lib/mysql:/sbin/nologin
+erik2:x:1102:1106::/home/eric2:/bin/bash
+habdirah:x:1103:1107::/home/habdirah:/bin/bash
+hussein:x:1105:1109::/home/hussein:/bin/bash
+production:x:1108:1111::/home/production:/bin/bash
+testuser:x:1135:1138::/home/testuser:/bin/bash
+tammy:x:1136:1139::/opt/tammy:/bin/bash
+testing:x:1137:1140::/home/testing:/bin/bash
+hussein2:x:1138:1141::/home/hussein2:/bin/bash
+susan:x:1160:1163::/home/susan:/bin/bash
+tech:x:1163:1166:Fake User:/home/tech:/bin/bash
+jsmith:x:1164:1168::/home/jsmith:/bin/bash
+joe:x:1165:1169::/home/joe:/bin/bash
+ann:x:1166:1170::/home/ann:/bin/bash
+james:x:1187:1191::/home/james:/bin/bash
+cadmin:x:1188:1192::/opt/cadmin:/bin/bash
+paul2:x:1189:1193::/home/paul2:/bin/bash
+clamupdate:x:995:991:Clamav database update user:/var/lib/clamav:/sbin/nologin
+dockerroot:x:994:989:Docker User:/var/lib/docker:/sbin/nologin
+salat:x:1211:1214::/home/salat:/bin/bash
+yusuf:x:1212:1215::/home/yusuf:/bin/bash
+aqadir:x:1213:1216::/home/aqadir:/bin/bash
+zaki:x:1214:1217::/home/zaki:/bin/bash
+ansible:x:1224:1229::/home/ansible:/bin/bash
+dovecot:x:97:97:Dovecot IMAP server:/usr/libexec/dovecot:/sbin/nologin
+dovenull:x:993:988:Dovecot's unauthorized user:/usr/libexec/dovecot:/sbin/nologin
+angel:x:1225:1230::/home/angel:/bin/bash
+chantelle:x:1226:1226::/home/chantelle:/bin/bash
+courtney:x:1228:1231::/home/courtney:/bin/bash
+jesse:x:1229:1232::/home/jesse:/bin/bash
+keriise:x:1230:1233::/home/keriise:/bin/bash
+mustafa:x:1233:1236::/home/mustafa:/bin/bash
+oliver:x:1234:1237::/home/oliver:/bin/bash
+richard:x:1235:1238::/home/richard:/bin/bash
+ruby:x:1236:1239::/home/ruby:/bin/bash
+ryan:x:1237:1240::/home/ryan:/bin/bash
+ty:x:1238:1241::/home/ty:/bin/bash
+vincent:x:1239:1242::/home/vincent:/bin/bash
+wesley:x:1240:1243::/home/wesley:/bin/zsh
+mubarak:x:1241:1244::/home/mubarak:/bin/bash
+maria1:x:1232:1235::/home/maria:/bin/bash
+maria2:x:1242:1245::/home/maria2:/bin/bash
+charlesb:x:1243:1246::/home/charlesb:/bin/zsh
+charlese:x:1244:1247::/home/charlese:/bin/bash
+charlesg:x:1227:1227::/home/charles:/bin/bash
+kevinp:x:1231:1234::/home/kevin:/bin/bash
+kevink:x:1245:1248::/home/kevink:/bin/bash
+thomas:x:0:0::/home/thomas:/bin/bash
+student9:x:1247:1251::/home/student9:/bin/bash
+student10:x:1248:1252::/home/student10:/bin/bash
+student11:x:1249:1253::/home/student11:/bin/bash
+johnk:x:1251:1255::/home/johnk:/bin/bash
+aaron:x:1252:1256::/home/aaron:/bin/bash
+adrian:x:1253:1257::/home/adrian:/bin/bash
+alejandro:x:1254:1258::/home/alejandro:/bin/bash
+antonio:x:1255:1259::/home/antonio:/bin/bash
+christopher:x:1256:1260::/home/christopher:/bin/bash
+derek:x:1257:1261::/home/derek:/bin/bash
+geoffrey:x:1258:1262::/home/geoffrey:/bin/bash
+jake:x:1259:1263::/home/jake:/bin/bash
+javier:x:1260:1264::/home/javier:/bin/bash
+john:x:1261:1265::/home/john:/bin/bash
+jonathan:x:1262:1266::/home/jonathan:/bin/bash
+justin:x:1263:1267::/home/justin:/bin/bash
+levi:x:1264:1268::/home/levi:/bin/bash
+rohalio:x:1265:1269::/home/rohalio:/bin/bash
+steven:x:1266:1270::/home/steven:/bin/bash
+taje:x:1267:1271::/home/taje:/bin/bash
+trenton:x:1268:1272::/home/trenton:/bin/bash
+walter:x:1269:1273::/home/walter:/bin/bash
+levi2:x:1270:1274::/home/levi2:/bin/bash
+timmy:x:1271:1275::/home/timmy:/bin/bash
+timmy2:x:1272:1276:Fake user:/home/timmy2:/bin/bash
+timmy3:x:1273:1277:Fake user3:/home/timmy3:/bin/bash
+timmy4:x:1274:1278:Fake user4:/home/timmy4:/bin/bash
+tester:x:1275:1279::/home/tester:/bin/nologin

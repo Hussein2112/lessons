@@ -6,11 +6,11 @@ cadmin is used here as a username
 1- what does the r,w and x permissions  mean on a file 
 
 
-2- can a user list the contents in a directory if he/she has a read (r) permission on the directory?
+2- can a user list the contents in a directory if he/she ONLY has a read (r) permission on the directory?
 
 
 
-3- can a user create files in a directory if he/she has a write (w) permission on the directory?
+3- can a user create files in a directory if he/she ONLY  has a write (w) permission on the directory?
 
 
 4- What are the permission contexts?
